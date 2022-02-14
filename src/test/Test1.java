@@ -6,7 +6,8 @@ public class Test1 {
 	private int B = 2;
 	
 	
-	public void Test2 (){
+	public Test1()
+	{
 		this.A = A;
 		this.B = B;
 		
