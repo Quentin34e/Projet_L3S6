@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+     <meta name="keywords" content="tabac, cigarettes, conséquence, addictab" />
+     <meta property="og:site_name" content="Addictab" />
+     <meta property="og:locale" content="fr_FR" />
+     <meta name="description" content="Site officiel Addictab: Vous trouverez sur le site un grand nombre d'informations. Vous pourrez connaître les différentes conséquences du tabac et vous pourrez intéragir avec d'autres utilisateurs"/>
+     <link rel="stylesheet" href="style.css" /><!-- Nommer la feuille css style.css-->
+</head>
+<body>
+		<!--ENTETE DU SITE-->
+<div id="bloc_page"><!--Faire id bloc_page sur css-->
+
+  <div id="entete"> <!--Faire id entete sur css-->
+   <h1>Forum</h1><!--Nom au dessus de l'onglet-->
+      <a id="connexion" class="bouton" <!--Faire une class bouton css--> href="../connexion/profil.php"> <!--A modifier--><span>Se connecter</span></a>
+         <nav>
+      <ul id="menu"> <!--Faire id menu sur css-->
+		<!--LISTE DES ONGLETS-->
+         <li class="onglet"><a href="#">Accueil</a></li><!--Faire class onglet sur css-->
+         <li class="onglet"><a href="#">Map</a></li>
+         <li class="onglet"><a href="#">Forum</a></li>
+         <li class="onglet"><a href="#">Prevention</a></li>       
+         <li class="onglet"><a href="#">Boutique</a></li>
+         <li class="onglet"><a href="#">Ressources</a></li>
+        
+      </ul>
+   </nav>
+</div><!--FIN ENTETE SITE-->
+
+
+<video controls width="250">
+  <source src="img/inscription.mp4" type="video/mp4">
+</video>
+<ul>
+<li><a href='sante.php'>Santé</a></li>
+<li><a href='sante.php'>Chatroom</a></li>
+</ul>
+<ul>
+		<li>addictab.pro@gmail.com</li>
+		<li>+33 4.77.77.87.87</li>
+</ul>
+		
+
+<footer><!--PIED DE PAGE-->			
+      <p id="mention"><small>LE Quentin / GRIBAL Clement / LE Maxime / DOS SANTOS Yohann
+	  <br />Copyright ADDICTAB - Tous droits réservés.</small></p><!-- peut etre réutilisé pour le projet--       
+ </footer> <!--FIN PIED DE PAGE-->
+</body>
+
+</html>

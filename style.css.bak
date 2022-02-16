@@ -1,0 +1,826 @@
+p{text-align: center}
+
+body{
+	font-family: 'Patrick Hand';
+	color: black;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	background-color: white;
+}
+#bloc_page{
+	max-width: 1000px;
+	min-width: 800px;
+	border: solid black 5px;
+	background-color: rgb(114,185,255);
+	background: linear-gradient(0deg, rgba(114,185,255) 0%, rgba(114,185,255) 98%, rgba(14,85,155) 100%);
+	border-radius: 30px;
+	margin: auto;
+	
+}
+footer {
+    display: flex;
+	margin:auto;
+    padding: 5px;
+    background-color: #45a1ff;
+    color: #fff;
+}
+
+header{
+	border-radius: 50px;
+	margin: 0 0 -40px 0;
+	padding: 0 0 0 0;
+}
+header #entete{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: flex-start;
+	text-align: center;
+}
+
+
+h1{
+	font-family: Georgia, serif;
+	font-size: 50px;
+	min-width: 700px;
+	margin: 10px 0px 0px 0px;
+	padding: 10px 0 0px 20px;
+	text-transform: uppercase;
+	color: rgb(210,54,52);
+	border-radius: 30px;
+}
+h1 em{
+	color: white;
+	font-style: normal;
+}
+#espace_ban_g{
+	min-width: 70px;
+}
+#espace_ban_g img{
+	position: absolute;
+	left: -100px;
+	bottom: -10px;
+}
+#espace_ban_d{
+	padding: 0 0 0px 20px;
+	min-width: 10px;
+
+}
+#ballon{
+	position: relative;
+	bottom: 10px;
+	left: 15px;
+}
+video {
+	display:block;
+	width:480px;
+	margin:0 auto 35px auto}
+
+table {
+	border: medium solid #6495ed;
+	border-collapse: collapse;
+	width: 50%;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	list-style-type: none;
+	font-size: 25px;
+	text-transform: uppercase;
+	margin: 10px 0 0 0;
+	padding: 0 0 0 0;
+	background: linear-gradient(0deg, rgba(191,52,85,0) 0%, rgba(191,52,85,0) 34%, rgba(191,52,85,1) 34%, rgba(191,52,85,1) 84%, rgb(114,185,255) 84%, rgb(114,185,255) 100%);
+	max-width: 800px;
+	margin: auto;
+
+	
+}
+ul{
+	list-style:none;
+	text-align:center;
+}
+th {
+	font-family: monospace;
+	border: thin solid #6495ed;
+	width: 50%;
+	padding: 5px;
+	margin: center;
+	background-color: #D0E3FA;
+	background-image: url(sky.jpg);
+}
+td {
+	font-family: sans-serif;
+	border: thin solid #6495ed;
+	width: 50%;
+	padding: 5px;
+	text-align: center;
+	background-color: #black;
+}
+caption {
+font-family: sans-serif;
+}
+nav{	
+	z-index: 100;
+	margin: auto;
+	padding: 0 0 0 0;
+	font-family: 'Patrick Hand';
+}
+nav #logo{
+
+}
+nav #menu{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	list-style-type: none;
+	font-size: 25px;
+	text-transform: uppercase;
+	margin: 10px 0 0 0;
+	padding: 0 0 0 0;
+	background: linear-gradient(0deg, rgba(191,52,85,0) 0%, rgba(191,52,85,0) 34%, rgba(191,52,85,1) 34%, rgba(191,52,85,1) 84%, rgb(114,185,255) 84%, rgb(114,185,255) 100%);
+	max-width: 800px;
+}
+nav ul .onglet{
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+
+nav ul li{
+	margin: 0 0 0 0;
+	float: left;
+	position: relative;
+}
+nav ul li a{
+	color: white;
+	display: block;
+	padding: 20px 15px 20px 15px;
+	margin: 0 0 0px 0;
+	text-decoration: none;
+}
+nav ul .onglet a:hover{
+	background-color: rgb(92,59,133);
+	border: solid 5px rgb(191,52,85);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-decoration: none;
+}
+nav ul .sous_onglet{
+	position: absolute;
+	display: none;
+	background-color: rgb(46,92,172);
+	border-radius: 10px;
+	list-style: none;
+	padding: 10px 0 0 0;
+	margin: 0 0 0 0;
+}
+nav ul li:hover .sous_onglet{
+	display: block;
+}
+nav ul .sous_onglet li{
+	float: none;
+	width: 250px;
+	text-align: left;
+}
+nav ul .sous_onglet li a{
+	padding: 10px 0 10px 20px;
+	margin: 0 0 0 0;
+	border-bottom: none;
+}
+
+
+picture img{
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+#diaporama{
+        position: relative;
+        top: -60px;
+        margin: auto;
+        max-width: 1000px;
+        min-width: 800px;
+        height: 400px;
+        border-bottom: solid black;
+        border-top: solid black;
+        overflow: hidden;
+
+}
+a{
+	text-decoration: underline;
+	color: white;
+	padding: 0 5px 5px 5px;
+}
+a:hover{
+	
+	color: black;
+	border-radius: 10px;
+}
+.article_miniature{
+	position: relative;
+	padding: 0 0 0 0;
+	height: 225px;
+	overflow: hidden;
+}
+.article_miniature a{
+	display: block;
+	text-decoration: none;
+}
+.article_miniature a:hover{
+	text-decoration: none;
+	color: white;
+}
+.article_miniature a h2{
+	text-decoration: none;
+	font-family: 'Roboto';
+	text-align: center;
+}
+.article_miniature p{
+	margin: 20px 0 0 0;
+}
+.article_miniature img{
+	float: left;
+	margin: 10px 20px 0px 0px;
+	border-radius: 30px;
+
+
+}
+.article_miniature .date{
+	position: absolute;
+	color: rgb(200,200,200);
+	text-align: right;
+	margin: 20px 0 0 0;
+	padding: 0 0 0 0;
+	bottom: 10px;
+	right: 10px;
+}
+article{
+	font-size: 25px;
+	position: relative;
+	border-top: solid black 5px;
+	border-bottom: solid black 5px;
+	background-color: rgb(191,52,85);
+	background: linear-gradient(0deg, rgba(191,52,85) 0%, rgba(191,52,85) 90%, rgba(141,2,45) 100%);
+	color: white;
+	margin: 0px 0px 20px 0px;
+	padding: 0px 0px 0px 0px;
+	text-align: justify;
+
+}
+article p{
+	margin: 10px 10px 0 10px;
+
+}
+article strong{
+	background-color: rgb(114,185,255,0.3);
+	border-radius: 10px;
+	text-decoration: none;
+	color: black;
+	padding: 0 5px 0px 5px;
+
+
+}
+
+article h2{
+	font-size: 1.5em;
+	text-align: center;
+	text-decoration: white dotted underline;
+	text-underline-offset: 3px;
+	margin: 0 0 5px 0;
+	padding: 0 0 0 0;
+}
+article h2 a{
+	font-size: 1.5em;
+	text-decoration: none;
+	color: white;
+	margin: 0 0 0 0;
+}
+article h2 a:focus{
+	text-decoration: none;
+	color: white;
+}
+article iframe{
+	display: block;
+	margin: auto;
+}
+article #brochure_partenaire{
+	display: block;
+	margin: 20px 0 0 0;
+	padding: 0 0 0 0;
+	width: 100%;
+	height: 2100px;
+}
+
+
+#trombi{
+	display: block;
+	margin: auto;
+	width: 150px;
+	border: solid black 5px;
+}
+#photo_article
+{
+	display: block;
+	margin: 10px 0 0 0;
+	padding: 0 0 0 0;
+}
+.photo_article img
+{
+	width: 98%;
+	border:  solid 5px rgb(46,92,172);
+	border-radius: 3px;
+	margin: auto;
+}
+
+	#liste_documents li{
+		list-style-image: url("images/puce_ballon.png");
+		margin-bottom: 5px;
+		padding: 0 0 0 0;
+		padding-left: 5px;
+  		list-style-position : outside;
+  	}
+
+	#liste_bureau{
+		display:flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		list-style-type: none;
+		text-align:center;
+		padding: 0 0 0 0;
+		margin: 0 0 0 0;
+
+	}
+	#liste_bureau li{
+		background: white;
+		border-radius: 10px;
+		border-color: rgb(0,20,130);
+		color: rgb(0,20,130);
+		border-style: double;
+		border-width: 10px;
+		margin:  10px 10px 10px 10px;
+		padding: 0 0 5px 0;
+		width: 160px;
+	}
+	#liste_bureau li img{
+		border-width: 2px;
+		border-bottom: solid rgb(0,20,130);
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+		width: 160px;
+		height: auto;
+	}
+	#liste_bureau li h3{
+		font-size: 17px;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+	}
+	#liste_bureau h4{
+		font-size: 13px;
+		margin: 5px 0 0 0;
+		padding: 0 0 0 0;
+	}
+	@media (orientation: portrait) {
+	    	#liste_bureau li h3{
+	    		font-size: 8px;
+	    	}
+	    	#liste_bureau h4{
+	    		font-size: 6px;
+	    	}
+	    	#liste_articles li h3{
+	    		font-size: 8px;
+	    	}
+	    	#mention{
+	    		font-size: 0.5em;
+	    	}
+    	}
+	#liste_articles{
+		display:flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		list-style-type: none;
+		text-align:center;
+		padding: 0 0 0 0;
+		margin: 0 0 0 0;
+		color: rgb(0,20,130);
+
+	}
+	.item_art_precio_tachado{
+		color: rgb(200,0,0);
+		text-decoration: line-through;
+	}
+	#liste_articles li
+	{
+		background: white;
+		border-radius: 10px;
+		border-color: rgb(0,20,130);
+		border-style: double;
+		border-width: 10px;
+		margin:  10px 10px 10px 10px;
+		padding: 0 0 0 0;
+		width: 160px;
+	}
+
+	#liste_articles li img
+	{
+		border-width: 2px;
+		border-bottom: solid rgb(103,78,48);
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+		width: 160px;
+	}
+	#liste_articles h3
+	{
+		font-size: 1em;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+	}
+	#liste_articles h4
+	{
+		font-size: 1em;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+	}
+	#liste_partenaires
+	{
+		display:flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		list-style-type: none;
+		text-align:center;
+		padding: 0 0 0 0;
+		margin: 0 0 0 0;
+	}
+	#liste_partenaires li
+	{
+		background: linear-gradient(rgb(212,55,45), rgb(255,255,255));
+		border-radius: 10px;
+		border-color: rgb(100, 50, 50);
+		border-style: double;
+		border-width: 10px;
+		margin:  10px 10px 10px 10px;
+		padding: 0 0 0 0;
+		width: min-content;
+	}
+	#liste_partenaires li h3{
+		font-size: 1em;
+		margin:  0 0 0 0;
+		padding: 0 0 0 0;
+	}
+	.bouton_classement{
+		position: absolute;
+		right: 5px;
+		top: 50px;
+		font-size: 1em;
+	}
+	.photo_equipe{
+		margin: auto;
+		background: white;
+		border-radius: 10px;
+		border-color: rgb(0,20,130);
+		color: rgb(0,20,130);
+		border-style: double;
+		border-width: 10px;
+		width: 800px;
+	}
+	.equipe{
+		display: flex;
+		flex-direction: row;
+	}
+	.nom_trop_long{
+		line-height: 90%;
+	}
+	.entraineur{
+		flex-direction: row;
+		text-align: center;
+		background: white;
+		border-radius: 10px;
+		border-color: rgb(0,20,130);
+		color: rgb(0,20,130);
+		border-style: double;
+		border-width: 10px;
+		margin:  10px 10px 10px 10px;
+		padding: 0 0 5px 0;
+		width: 200px;
+		height: 350px;
+	}
+	.entraineur h3{
+		font-size: 20px;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+	}
+	.entraineur h4{
+		font-size: 15px;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+	}
+	.entraineur img{
+		border-width: 2px;
+		border-bottom: solid rgb(0,20,130);
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+		width: 200px;
+		height: auto;
+	}
+	.liste_joueurs{
+		display:flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		list-style-type: none;
+		text-align:center;
+		padding: 0 0 0 0;
+		margin: 0 0 0 0;
+	}
+	.liste_joueurs li{
+		background: white;
+		border-radius: 10px;
+		border-color: rgb(0,20,130);
+		color: rgb(0,20,130);
+		border-style: double;
+		border-width: 10px;
+		margin:  10px 10px 10px 10px;
+		padding: 0 0 5px 0;
+		width: 100px;
+		height: 188px;
+	}
+	.liste_joueurs li img{
+		border-width: 2px;
+		border-bottom: solid rgb(0,20,130);
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+		width: 100px;
+		height: auto;
+	}
+	.liste_joueurs li h3{
+		font-size: 17px;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+	}
+	.liste_joueurs h4{
+		font-size: 13px;
+		margin: 5px 0 0 0;
+		padding: 0 0 0 0;
+	}
+
+#meteo{
+	background-color: rgb(46,92,172);
+	border-radius: 3px;
+	margin: 10px 0 0 0;
+	padding:  5px 5px 5px 5px;
+}
+#semaine{
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 0 0 0;
+}
+#semaine .titre_calendrier{
+	width: 500px;
+	height: auto;
+}
+#semaine img{
+	width: 50px;
+	height: auto;
+}
+#semaine table{
+	border-collapse: collapse;
+	margin: auto;
+	border: none;
+	border-radius: 5px;
+	background-color: rgba(191,52,85,0);
+}
+#semaine .titre_tableau_calendrier{
+	padding: 10px 0 10px 0;
+}
+#semaine table .titrepoule{
+	background: linear-gradient(0deg, rgba(0,100,100,1) 0%, rgba(114,185,255,1) 7%, rgba(255,255,255,0.7) 24%, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 80%, rgba(255,255,255,0) 100%);
+	border-top-left-radius: 50px;
+	text-align: center;
+	font-size: 20px;
+	font-family: Lalezar;
+	text-transform: uppercase;
+	color: rgb(50,0,0);
+	padding:20px 0px 10px 5px;
+}
+#semaine .lienquestion{
+	background: linear-gradient(0deg, rgba(0,100,100,1) 0%, rgba(114,185,255,1) 7%, rgba(255,255,255,0.7) 24%, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 80%, rgba(255,255,255,0) 100%);
+	border-top-right-radius: 50px;
+	font-size: 20px;
+	padding:20px 0px 10px 5px;
+}
+#semaine .liensuite4{
+	color: rgb(255,100,100);
+	padding: 10px 10px 10px 10px;
+}
+#semaine .liensuite4_pt
+{
+	color: rgb(0,0,0);
+}
+#semaine .lienblanc{
+	padding: 10px 10px 10px 10px;
+	font-size: 30px;
+}
+#semaine .td_vide{
+	background-color: white;
+	color: rgb(191,52,85);
+	padding: 0 0 0 1px;
+}
+#semaine table .lienquestion_pt{
+	background-color: rgb(255,255,255);
+	padding: 0 10px 0 10px;
+	font-size: 20px;
+	text-align: center;
+	color: rgb(0,0,0);
+	font-family: Lalezar;
+}
+#semaine table .liengris_pt{
+	background-color: rgb(255,255,255);;
+	font-style: italic;
+	font-size: 20px;
+	color: rgb(0,0,0);
+}
+#semaine table .liengris{
+	background-color: rgb(255,255,255);
+	text-align: center;
+}
+#liste_contact li{
+	padding: 10px 10px 10px 10px;
+	font-size: 18px;
+}
+#liste_contact img{
+	position: relative;
+	width: 30px;
+	margin: 10px 10px 0px 10px;
+	top: 5px;
+}
+#tableau_classement{
+	max-width: 1000px;
+	text-align: center;
+	color: black;
+	margin: auto;
+	padding: 0 0 0 0;
+
+}
+#tableau_classement table{
+	margin: auto;
+	margin-bottom: 10px;
+	border: solid red;
+	}
+#tableau_classement td{
+	font-size: 0.7em;
+	background-color: rgb(114,185,255);
+	border: solid rgb(150,200,255) 1px;
+	text-align: center;
+	
+}
+#tableau_classement .lienblanc_pt{
+	background: linear-gradient(0deg, rgb(191,52,85) 0%, rgb(150,50,50) 100%);
+	color: white;
+}
+
+
+.signature{
+	font-size: 0.8em;
+	font-style: italic;
+	text-align: right;
+	text-decoration: underline;
+}
+
+.bloc_centre{
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+
+
+iframe{
+	border: solid black 2px;
+}
+#mot_presidente {
+	background-image: url("images/Voeux Malory.png");
+	background-repeat: no-repeat;
+	border-radius: 15px;
+	height: auto;
+	width: 860px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	padding-top: 400px;
+}
+#mot_presidente p{
+	background-color: rgba(0,0,0,0.5);
+	padding: 20px 20px 20px 20px;
+}
+.p_centre{
+	margin: auto;
+	text-align: center;
+}
+.image_flottante_left{
+	float: left;
+}
+#plan_site{
+	margin: auto;
+	border-top: solid white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	list-style: none;
+}
+#plan_site ul{
+	list-style: none;
+	padding-left: 0;	
+}
+#plan_site .titre_plan{
+	text-transform: uppercase;
+	font-size: 1.5em;
+	text-decoration: none;
+}
+#mention{
+	text-align: right;
+	margin-right: 10px;
+}
+#alerte{
+	background-color: rgb(200,200,200);
+	color: red;
+	border-radius: 15px;
+	text-align: center;
+	margin: auto;
+	padding: 10px 10px 10px 10px;
+}
+label{
+	font-size: 1.2em;
+}
+input{
+	font-size: 1.2em;
+}
+.question_formulaire{
+	
+}
+.reponse_formulaire{
+	color: rgb(200,200,255);
+	
+}
+
+#connexion{
+	position: absolute;
+	font-size: 1.5em;
+	right: 20px;
+	top: 5px;
+	
+}
+
+#deconnexion{
+	position: absolute;
+	font-size: 1.2em;
+	right: 20px;
+	top: 50px;	
+}
+
+.bouton {
+        display: inline-block;
+        background-color: rgb(14,85,155);
+        box-shadow: 10px 10px 10px black;
+        border-radius: 10px;
+        border: 4px solid #black;
+        text-decoration: none;
+        color: #eeeeee;
+        text-align: center;
+        font-size: 1.2em;
+        padding: 5px 10px 5px 10px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 10px;
+      }
+      .bouton span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      .bouton span:after {
+        content: "\00bb";
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      .bouton:hover {
+        background-color: rgb(114,185,255);
+      }
+      .bouton:hover span {
+        padding-right: 25px;
+      }
+      .bouton:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
