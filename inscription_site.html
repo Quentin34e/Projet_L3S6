@@ -22,12 +22,12 @@
          <nav>
       <ul id="menu"> 
 		<!--LISTE DES ONGLETS-->
-		<li id="espace_ban_g"><img src="Addictab_logo3.png" alt="logo Addictab" /></li>
+		<li id="espace_ban_g"><img src="img/Addictab_logo3.png" alt="logo Addictab" /></li>
          <li class="onglet"><a href="Accueil.html">Accueil</a></li>
-         <li class="onglet"><a href="#">Map</a></li>
+         <li class="onglet"><a href="Carte_interactive.html">Map</a></li>
          <li class="onglet"><a href="Forum.html">Forum</a></li>
          <li class="onglet"><a href="Page_Prevention.html">Prevention</a></li>       
-         <li class="onglet"><a href="#">Ressources</a></li>
+         <li class="onglet"><a href="Ressources.html">Ressources</a></li>
         
       </ul>
    </nav>
@@ -36,20 +36,31 @@
 		<section>
 			<article>
 				 <h2>S'inscrire sur le site:</h2>
-
-                        <form action="inscription_site.php" method="post">
-                            <p class="p_centre">
-                                <label for="nom">Nom: </label><br /><input type="text" id="nom" name="nom"><br />
-                                <label for="prenom">Prénom: </label><br /><input type="text" id="prenom" name="prenom"><br />
-                                <label for="email">Email: </label><br /><input type="email" id="email" name="email" aria-describedby="email-help"><br />
-                                <label for="password" >choisissez un mot de passe:</label><br />
-                                <input type="password" id="password" name="password"><br />
-                                <label for="verification_password" >Entrez à nouveau votre mot de passe pour vérification:</label><br />
-                                <input type="password" id="verification_password" name="verification_password"><br />
-                                <input type="hidden" id="bouton_click" name="bouton_click" value="ok">
-                                <button class="bouton" type="submit" name="bouton"><span>Soumettre l'inscription</span></button>
-                            </p>
-                        </form>
+					<form action="enregistrement.php" method="post" autocomplete="off">
+					<p>
+					Nom :
+					<input type="text" name="n" value=""/>
+					</p>
+					<p>
+					Prénom :
+					<input type="text" name="p" value=""/>
+					</p>
+					<p>
+					Adresse e-mail:
+					<input type="text" name="mail" value=""/>
+					</p>
+					<p>
+					Mot de passe :
+					<input type="password" name="mdp1" value=""/>
+					</p>
+					<p>
+					Confirmer votre mot de passe :
+					<input type="password" name="mdp2" value=""/>
+					</p>
+					<p class="p_centre">
+						<button class="bouton" type="submit" class="btn btn-primary"><span>Envoyer</span></button>
+					</p>
+					</form>
 
 			</article>
 		</section>
