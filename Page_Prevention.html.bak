@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 <meta charset="utf-8" />
+     <link rel="stylesheet" href="style.css" />
+ 
+     <title>Addictab</title>
+        <script type="text/javascript" src="../javascript/affichermasquer.js"> </script><!-- utile pour le diapo-->
+	</head>
+	
+<body>
+		<!--ENTETE DU SITE-->
+	     <div id="bloc_page">
+                <header>
+                            <div id="entete"> 
+   <h1>Accueil</h1><!--Nom au dessus de l'onglet-->
+      <a id="connexion" class="bouton" href="connexion.html">  <!--A modifier--><span>Se connecter</span></a>
+         <nav>
+      <ul id="menu"> 
+		<!--LISTE DES ONGLETS-->
+		<li id="espace_ban_g"><img src="Addictab_logo3.png" alt="logo Addictab" /></li>
+         <li class="onglet"><a href="Accueil.html">Accueil</a></li>
+         <li class="onglet"><a href="#">Map</a></li>
+         <li class="onglet"><a href="Forum.html">Forum</a></li>
+         <li class="onglet"><a href="Page_Prevention.html">Prevention</a></li>       
+         <li class="onglet"><a href="#">Ressources</a></li>
+        
+      </ul>
+   </nav>
+</div>
+<video controls width="250">
+  <source src="img/inscription.mp4" type="video/mp4">
+</video>
+<ul>
+<li><p class="p_centre"><a class="bouton" href="sante.html"><span></span></a></p></li>
+<li><p class="p_centre"><a class="bouton" href="chatroom.html"><span>CHATROOM</span></a></p></li>
+</ul>
+<ul>
+		<li>addictab.pro@gmail.com</li>
+		<li>+33 4.77.77.87.87</li>
+</ul>
+<p> page de connexion </p>
+		 <footer><!--PIED DE PAGE-->
+            
+
+			<a>Contact</a>
+			<ul>
+				<li>Mail : contact@addictab.fr</li>
+				<li>Numéro de téléphone: 06 XX XX XX XX</li>
+			</ul>
+          
+		 </footer> <!--FIN PIED DE PAGE-->
+		 </div>
+</body>
+</html>
