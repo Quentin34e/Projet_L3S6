@@ -31,15 +31,31 @@
 
 		<section>
 			<article class="article_miniature">
-                    <img src="../img/Drapeau_france1.png" alt="drapeau français" />
-                    <h2>Etude : La France</h2>
-                    <p>Nous avons analysé les données pour en ressortir des graphiques qui sont les suivants :</p>
-					<ul>
-						<li><img src="../img/TauxFumeurs_France.png" alt="Graphique fumeurs" /></li>
-					</ul>
-					<p class="date">mardi 15 février 2022</p>
-                </a>
-                   
+                <a href="France.php">
+                    <img src="../img/Drapeau_france1.png" alt="drapeau francais" />
+                    <h2>Etude : Les fumeurs en France</h2>
+                    <p>Nous avons analysé les données pour en ressortir des graphiques qui sont les suivants : ...</p>
+                                    
+                    </a>
+					<p class="date">mardi 15 février 2022, 16:50</p>
+			</article>
+			<article class="article_miniature">
+                <a href="Monde.php">
+                    <img src="../img/Monde1.jpg" alt="image monde" />
+                    <h2>Etude : Les fumeurs dans le monde</h2>
+                    <p>Suite à l'étude des fumeurs en France, nous avons mené une autre étude sur les fumeurs dans le monde ...</p>
+                                    
+                    </a>
+					<p class="date">mardi 22 février 2022, 14:30</p>
+			</article>
+			<article class="article_miniature">
+                <a href="RessourcesSupp.php">
+                    <img src="../img/Ressources.jpg" alt="image monde" />
+                    <h2>Ressources Supplémentaires</h2>
+                    <p>Des vidéos expliquatives, des contacts, des conseils, des dispositifs ...</p>
+                                    
+                    </a>
+					<p class="date">mardi 1 mars 2022, 10:10</p>
 			</article>
 		</section>
 		 <footer><!--PIED DE PAGE-->
