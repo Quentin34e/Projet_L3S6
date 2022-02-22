@@ -28,16 +28,16 @@
                 <header>
                             <div id="entete"> 
    <h1>Accueil</h1><!--Nom au dessus de l'onglet-->
-      <a id="connexion" class="bouton" href="connexion.html">  <!--A modifier--><span>Se connecter</span></a>
+      <a id="connexion" class="bouton" href="connexion.php">  <!--A modifier--><span>Se connecter</span></a>
          <nav>
       <ul id="menu"> 
 		<!--LISTE DES ONGLETS-->
-		<li id="espace_ban_g"><img src="img/Addictab_logo3.png" alt="logo Addictab" /></li>
-         <li class="onglet"><a href="Accueil.html">Accueil</a></li>
-         <li class="onglet"><a href="Carte_interactive.html">Map</a></li>
-         <li class="onglet"><a href="Forum.html">Forum</a></li>
-         <li class="onglet"><a href="Page_Prevention.html">Prevention</a></li>       
-         <li class="onglet"><a href="Ressources.html">Ressources</a></li>
+		<li id="espace_ban_g"><img src="../img/Addictab_logo3.png" alt="logo Addictab" /></li>
+         <li class="onglet"><a href="Accueil.php">Accueil</a></li>
+         <li class="onglet"><a href="Carte_interactive.php">Map</a></li>
+         <li class="onglet"><a href="Forum.php">Forum</a></li>
+         <li class="onglet"><a href="Page_Prevention.php">Prevention</a></li>       
+         <li class="onglet"><a href="Ressources.php">Ressources</a></li>
         
       </ul>
    </nav>
@@ -119,8 +119,8 @@
 			<a>Contact</a>
 			<ul id="liste_contact">
 				<li>Numéro de téléphone: 06 XX XX XX XX</li>
-				<li>Mail : <a href="mailto:addictab123@gmail.com">contact@addictab.fr</a><img src="img/email.png" alt="image enveloppe" /></li>
-				<li>Facebook: <a href="https://www.facebook.com/profile.php?id=100078106309466">Addictab</a><img src="img/Logo_facebook.png" alt="logo facebook" /></li>
+				<li>Mail : <a href="mailto:addictab123@gmail.com">contact@addictab.fr</a><img src="../img/email.png" alt="image enveloppe" /></li>
+				<li>Facebook: <a href="https://www.facebook.com/profile.php?id=100078106309466">Addictab</a><img src="../img/Logo_facebook.png" alt="logo facebook" /></li>
 
 			</ul>
 			<p id="mention"><small>Quentin / Clement / Maxime / Yohann<br />Copyright ADDICTAB - Tous droits réservés.</small></p>

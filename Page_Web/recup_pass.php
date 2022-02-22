@@ -18,16 +18,16 @@
                 <header>
                             <div id="entete"> 
    <h1>Accueil</h1><!--Nom au dessus de l'onglet-->
-      <a id="connexion" class="bouton" href="connexion.html">  <!--A modifier--><span>Se connecter</span></a>
+      <a id="connexion" class="bouton" href="connexion.php">  <!--A modifier--><span>Se connecter</span></a>
          <nav>
       <ul id="menu"> 
 		<!--LISTE DES ONGLETS-->
-		<li id="espace_ban_g"><img src="img/Addictab_logo3.png" alt="logo Addictab" /></li>
-         <li class="onglet"><a href="Accueil.html">Accueil</a></li>
-         <li class="onglet"><a href="Carte_interactive.html">Map</a></li>
-         <li class="onglet"><a href="Forum.html">Forum</a></li>
-         <li class="onglet"><a href="Page_Prevention.html">Prevention</a></li>       
-         <li class="onglet"><a href="Ressources.html">Ressources</a></li>
+		<li id="espace_ban_g"><img src="../img/Addictab_logo3.png" alt="logo Addictab" /></li>
+         <li class="onglet"><a href="Accueil.php">Accueil</a></li>
+         <li class="onglet"><a href="Carte_interactive.php">Map</a></li>
+         <li class="onglet"><a href="Forum.php">Forum</a></li>
+         <li class="onglet"><a href="Page_Prevention.php">Prevention</a></li>       
+         <li class="onglet"><a href="Ressources.php">Ressources</a></li>
         
       </ul>
    </nav>
@@ -35,33 +35,13 @@
 
 		<section>
 			<article>
-				 <h2>S'inscrire sur le site:</h2>
-					<form action="enregistrement.php" method="post" autocomplete="off">
-					<p>
-					Nom :
-					<input type="text" name="n" value=""/>
-					</p>
-					<p>
-					Prénom :
-					<input type="text" name="p" value=""/>
-					</p>
-					<p>
-					Adresse e-mail:
-					<input type="text" name="mail" value=""/>
-					</p>
-					<p>
-					Mot de passe :
-					<input type="password" name="mdp1" value=""/>
-					</p>
-					<p>
-					Confirmer votre mot de passe :
-					<input type="password" name="mdp2" value=""/>
-					</p>
-					<p class="p_centre">
-						<button class="bouton" type="submit" class="btn btn-primary"><span>Envoyer</span></button>
-					</p>
-					</form>
-
+				<form action="recup_pass.php" method="post">
+                            <p class="p_centre">
+                                <label for="email">Renseignez votre email:</label><br /><input type="email" id="email" name="email" aria-describedby="email-help"><br />
+                                <input type="hidden" id="bouton_click" name="bouton_click" value="ok">
+                                <button class="bouton" type="submit" name="bouton"><span>Renvoyez-moi mon mot de passe</span></button>
+                            </p>
+                        </form>
 			</article>
 		</section>
 		 <footer><!--PIED DE PAGE-->
