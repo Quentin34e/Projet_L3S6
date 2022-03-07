@@ -20,11 +20,11 @@
          <nav>
       <ul id="menu"> 
 		<!--LISTE DES ONGLETS-->
-		<li id="espace_ban_g"><img src="img/Addictab_logo3.png" alt="logo Addictab" /></li>
-         <li class="onglet"><a href="Accueil.html">Accueil</a></li>
+		<li id="espace_ban_g"><img src="../img/Addictab_logo3.png" alt="logo Addictab" /></li>
+         <li class="onglet"><a href="Accueil.php">Accueil</a></li>
          <li class="onglet"><a href="#">Map</a></li>
-         <li class="onglet"><a href="Forum.html">Forum</a></li>
-         <li class="onglet"><a href="Page_Prevention.html">Prevention</a></li>       
+         <li class="onglet"><a href="Forum.php">Forum</a></li>
+         <li class="onglet"><a href="Page_Prevention.php">Prevention</a></li>       
          <li class="onglet"><a href="#">Ressources</a></li>
         
       </ul>
@@ -33,7 +33,7 @@
 
 <section>
 	<article>
-	<iframe width="560" height="315" src="img/inscription.mp4" title="Forum" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="../img/inscription.mp4" title="Forum" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	<p class="p_centre"><a class="bouton" href="#"><span>SANTE</span></a></p>
 	<p class="p_centre"><a class="bouton" href="#"><span>CHATROOM</span></a></p>
 	</ul>
@@ -41,27 +41,24 @@
 <br />
 
 <?php
-$bdd = new PDO ("mysql:host=localhost;dbname=adictab2;charset=utf8",'root','root');
-?>
-<?php
-		<table border =1>
-				<tr>
-					<th>id</th>
-					<th>nom</th>
-					<th>quant</th>
-					<th>prix</th>
-					<th>lien</th>
-				</tr>
 
-				$rep =$bdd->query('select idPost, intitule ,date , heure, position from post');
-				while($ligne = $rep -> fetch()){
-					echo "<tr><td>".
-					$ligne['idPost']."</td><td>".
-					$ligne['intitule']."</td><td>".
-					$ligne['date']."</td><td>".
-					$ligne['heure']."euros"."</td></tr>";
-				}
-				$rep ->closeCursor();
+$base = mysql_connect ('localhost', 'root', 'root');
+	mysql_select_db ('adictab2', $base) ;
+
+
+
+	// on libère l'espace mémoire alloué pour cette reqête
+	mysql_free_result ($req);
+	// on ferme la connection à la base de données.
+	mysql_close ();
+	?>
+
+	<!-- on ferme notre table html -->
+	</table>
+	<br /><br />
+	<!-- on insère un lien qui nous permettra de rajouter des réponses à ce sujet -->
+	<a href="./insert_reponse.php?numero_du_sujet=<?php echo $_GET['id_sujet_a_lire']; ?>">Répondre</a>
+	<?php
 ?>
 	
 </article>
