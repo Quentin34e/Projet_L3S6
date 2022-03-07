@@ -17,17 +17,17 @@
 	     <div id="bloc_page">
                 <header>
                             <div id="entete"> 
-   <h1>Accueil</h1><!--Nom au dessus de l'onglet-->
+   <h1>Se connecter</h1><!--Nom au dessus de l'onglet-->
       <a id="connexion" class="bouton" href="#">  <!--A modifier--><span>Se connecter</span></a>
          <nav>
       <ul id="menu"> 
 		<!--LISTE DES ONGLETS-->
-		<li id="espace_ban_g"><img src="img/Addictab_logo3.png" alt="logo Addictab" /></li>
-         <li class="onglet"><a href="Accueil.html">Accueil</a></li>
-         <li class="onglet"><a href="Carte_interactive.html">Map</a></li>
-         <li class="onglet"><a href="Forum.html">Forum</a></li>
-         <li class="onglet"><a href="Page_Prevention.html">Prevention</a></li>       
-         <li class="onglet"><a href="Ressources.html">Ressources</a></li>
+		<li id="espace_ban_g"><img src="../img/Addictab_logo3.png" alt="logo Addictab" /></li>
+         <li class="onglet"><a href="Accueil.php">Accueil</a></li>
+         <li class="onglet"><a href="Carte_interactive.php">Map</a></li>
+         <li class="onglet"><a href="Forum.php">Forum</a></li>
+         <li class="onglet"><a href="Page_Prevention.php">Prevention</a></li>       
+         <li class="onglet"><a href="Ressources.php">Ressources</a></li>
         
       </ul>
    </nav>
@@ -36,7 +36,7 @@
 		<section>
 			<article>
 				<h2>Connectez-vous</h2> 
-					<form action="profil.html" method="post">    <p class="p_centre">
+					<form action="profil.php" method="post">    <p class="p_centre">
 						<label for="email" class="form-label">Email utilisé lors de la création de votre compte:</label><br />
 						<input type="email" class="form-control" id="email" name="email" aria-describedby="email-help" placeholder="you@exemple.com">
 					</p>
@@ -48,8 +48,8 @@
 						<button class="bouton" type="submit" class="btn btn-primary"><span>Connexion</span></button>
 					</p>
 				</form>
-				<p class="p_centre"><a class="bouton" href="recup_pass.html"><span>Vous avez oublié votre mot de passe</span></a></p>
-				<p class="p_centre"><a class="bouton" href="inscription_site.html"><span>Vous n'êtes pas encore inscrit</span></a></p>
+				<p class="p_centre"><a class="bouton" href="recup_pass.php"><span>Vous avez oublié votre mot de passe</span></a></p>
+				<p class="p_centre"><a class="bouton" href="inscription_site.php"><span>Vous n'êtes pas encore inscrit</span></a></p>
 
 			</article>
 		</section>

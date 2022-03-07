@@ -16,16 +16,25 @@
                 <header>
                             <div id="entete"> 
    <h1>SANTE</h1><!--Nom au dessus de l'onglet-->
-      <a id="connexion" class="bouton" href="connexion.html">  <!--A modifier--><span>Se connecter</span></a>
+      <a id="connexion" class="bouton" href="connexion.php">  <!--A modifier--><span>Se connecter</span></a>
          <nav>
       <ul id="menu"> 
 		<!--LISTE DES ONGLETS-->
+<<<<<<< HEAD:sante.html
 		<li id="espace_ban_g"><img src="img/Addictab_logo3.png" alt="logo Addictab" /></li>
          <li class="onglet"><a href="Accueil.html">Accueil</a></li>
          <li class="onglet"><a href="#">Map</a></li>
          <li class="onglet"><a href="Forum.html">Forum</a></li>
          <li class="onglet"><a href="Page_Prevention.html">Prevention</a></li>       
          <li class="onglet"><a href="#">Ressources</a></li>
+=======
+		<li id="espace_ban_g"><img src="../img/Addictab_logo3.png" alt="logo Addictab" /></li>
+         <li class="onglet"><a href="Accueil.php">Accueil</a></li>
+         <li class="onglet"><a href="Carte_interactive.php">Map</a></li>
+         <li class="onglet"><a href="Forum.php">Forum</a></li>
+         <li class="onglet"><a href="Page_Prevention.php">Prevention</a></li>       
+         <li class="onglet"><a href="Ressources.php">Ressources</a></li>
+>>>>>>> ba18512be183065dfcb1f4baeaf3d6145469c2f4:Page_Web/sante.php
         
       </ul>
    </nav>
@@ -37,8 +46,8 @@
 </ul>
 
 <ul>
-<li><p class="p_centre"><a class="bouton" href="sante.html"><span>SANTE</span></a></p></li>
-<li><p class="p_centre"><a class="bouton" href="chatroom.html"><span>CHATROOM</span></a></p></li>
+<li><p class="p_centre"><a class="bouton" href="sante.php"><span>SANTE</span></a></p></li>
+<li><p class="p_centre"><a class="bouton" href="chatroom.php"><span>CHATROOM</span></a></p></li>
 </ul>
 
 		

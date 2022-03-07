@@ -7,6 +7,20 @@
      <meta property="og:locale" content="fr_FR" />
      <meta name="description" content="Site officiel Addictab: Vous trouverez sur le site un grand nombre d'informations. Vous pourrez connaître les différentes conséquences du tabac et vous pourrez intéragir avec d'autres utilisateurs"/>
      <link rel="stylesheet" href="style.css" />
+	 
+	 <?php
+	if($_POST['mdp1']==$_POST['mdp2'] && $_POST['n']!="" && $_POST['p']!="" && $_POST['adr']!="" && $_POST['num']!="" && $_POST['mail']!="" && $_POST['mdp1']!="" && $_POST['mdp2']!="") {
+	header('Location: file:///C:/Users/cleme/OneDrive/Documents/Miashs/L3/Projet/Projet_L3S6/Accueil.html');
+	exit();
+	}
+	else{
+	header('Location: file:///C:/Users/cleme/OneDrive/Documents/Miashs/L3/Projet/Projet_L3S6/inscription_site.html?n='].$_POST['n'].'&p='.$_POST['p'].'&mail='.$_POST['mail']);
+	echo $_POST['n'];
+	echo $_POST['p'];
+	echo $_POST['mail'];
+	exit();
+	}
+	?>
  
      <title>Addictab</title>
         <script type="text/javascript" src="../javascript/affichermasquer.js"> </script><!-- utile pour le diapo-->
@@ -24,35 +38,15 @@
 		<!--LISTE DES ONGLETS-->
 		<li id="espace_ban_g"><img src="img/Addictab_logo3.png" alt="logo Addictab" /></li>
          <li class="onglet"><a href="Accueil.html">Accueil</a></li>
-         <li class="onglet"><a href="Carte_interactive.html">Map</a></li>
+         <li class="onglet"><a href="#">Map</a></li>
          <li class="onglet"><a href="Forum.html">Forum</a></li>
          <li class="onglet"><a href="Page_Prevention.html">Prevention</a></li>       
-         <li class="onglet"><a href="Ressources.html">Ressources</a></li>
+         <li class="onglet"><a href="#">Ressources</a></li>
         
       </ul>
    </nav>
 </div><!--FIN ENTETE SITE-->
 
-		<section>
-			<article>
-				<h2>Connectez-vous</h2> 
-					<form action="profil.html" method="post">    <p class="p_centre">
-						<label for="email" class="form-label">Email utilisé lors de la création de votre compte:</label><br />
-						<input type="email" class="form-control" id="email" name="email" aria-describedby="email-help" placeholder="you@exemple.com">
-					</p>
-					<p class="p_centre">
-						<label for="password" class="form-label">Mot de passe:</label><br />
-						<input type="password" class="form-control" id="password" name="password">
-					</p>
-					<p class="p_centre">
-						<button class="bouton" type="submit" class="btn btn-primary"><span>Connexion</span></button>
-					</p>
-				</form>
-				<p class="p_centre"><a class="bouton" href="recup_pass.html"><span>Vous avez oublié votre mot de passe</span></a></p>
-				<p class="p_centre"><a class="bouton" href="inscription_site.html"><span>Vous n'êtes pas encore inscrit</span></a></p>
-
-			</article>
-		</section>
 		 <footer><!--PIED DE PAGE-->
             
 
