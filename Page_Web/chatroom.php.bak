@@ -57,7 +57,7 @@ $bdd = new PDO ("mysql:host=localhost;dbname=adictab2;charset=utf8",'root','root
 				while($ligne = $rep -> fetch()){
 					echo "<tr><td>".
 					$ligne['idPost']."</td><td>".
-					$ligne['intitule']."</td><td>".
+					$ligne['intitulé']."</td><td>".
 					$ligne['date']."</td><td>".
 					$ligne['heure']."euros"."</td></tr>";
 				}
