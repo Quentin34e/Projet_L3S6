@@ -18,7 +18,14 @@
                 <header>
                             <div id="entete"> 
    <h1>Inscription</h1><!--Nom au dessus de l'onglet-->
-      <a id="connexion" class="bouton" href="connexion.php">  <!--A modifier--><span>Se connecter</span></a>
+      <?  session_start();
+			if(isset($_SESSION['utilisateur'])){
+				echo '<a id="connexion" class="bouton" href="déconnexion.php">  <span>Se déconnecter</span></a>';
+			}
+			else {
+				echo '<a id="connexion" class="bouton" href="connexion.php">  <span>Se connecter</span></a>';
+			}
+		?>
          <nav>
       <ul id="menu"> 
 		<!--LISTE DES ONGLETS-->
@@ -36,22 +43,22 @@
 		<section>
 			<article>
 				 <h2>S'inscrire sur le site:</h2>
-					<form action="enregistrement.php" method="post" autocomplete="off">
+					<form action="Enregistrement.php" method="post" autocomplete="off">
 					<p>
 					Nom :
-					<input type="text" name="n" value=""/>
+					<input type="text" name="n" value=<?php echo "'".$_POST['n']."'"; ?> />
 					</p>
 					<p>
 					Prénom :
-					<input type="text" name="p" value=""/>
+					<input type="text" name="p" value=<? echo "'".$_POST['p']."'"; ?> />
 					</p>
 					<p>
 					Adresse e-mail:
-					<input type="text" name="mail" value=""/>
+					<input type="text" name="mail" value=<? echo "'".$_POST['mail']."'"; ?> />
 					</p>
 					<p>
 					Mot de passe :
-					<input type="password" name="mdp1" value=""/>
+					<input type="password" name="mdp1" value="" />
 					</p>
 					<p>
 					Confirmer votre mot de passe :

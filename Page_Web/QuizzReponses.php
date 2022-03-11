@@ -13,7 +13,14 @@
                 <header>
                             <div id="entete"> 
    <h1>Réponses</h1><!--Nom au dessus de l'onglet-->
-      <a id="connexion" class="bouton" href="connexion.php">  <!--A modifier--><span>Se connecter</span></a>
+      <?  session_start();
+			if(isset($_SESSION['utilisateur'])){
+				echo '<a id="connexion" class="bouton" href="déconnexion.php">  <span>Se déconnecter</span></a>';
+			}
+			else {
+				echo '<a id="connexion" class="bouton" href="connexion.php">  <span>Se connecter</span></a>';
+			}
+		?>
          <nav>
       <ul id="menu"> 
 		<!--LISTE DES ONGLETS-->
@@ -78,14 +85,12 @@
 	 <footer><!--PIED DE PAGE-->
             
 
-			<a>Contact</a>
-			<ul id="liste_contact">
-				<li>Numéro de téléphone: 06 XX XX XX XX</li>
-				<li>Mail : <a href="mailto:addictab123@gmail.com">contact@addictab.fr</a><img src="../img/email.png" alt="image enveloppe" /></li>
-				<li>Facebook: <a href="https://www.facebook.com/profile.php?id=100078106309466">Addictab</a><img src="../img/Logo_facebook.png" alt="logo facebook" /></li>
-
-			</ul>
+			<h2 align="center">Contact</h2>
+				<p align="center"><a href="tel:06XXXXXXXX"><img src="../img/Logo_Telephone.jpg" alt="image téléphone" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px" /></a>
+				<a href="mailto:addictab123@gmail.com"><img src="../img/email.png" alt="image enveloppe" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px"/></a>
+				<a href="https://www.facebook.com/profile.php?id=100078106309466"><img src="../img/Logo_facebook.png" alt="logo facebook" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px"/></a>
 			<p id="mention"><small>Quentin / Clement / Maxime / Yohann<br />Copyright ADDICTAB - Tous droits réservés.</small></p>
+			<br><br>
 
           
 		 </footer> <!--FIN PIED DE PAGE-->

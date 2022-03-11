@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html>
 	<head>
 	 <meta charset="utf-8" />
@@ -18,7 +21,14 @@
                 <header>
                             <div id="entete"> 
    <h1>Se connecter</h1><!--Nom au dessus de l'onglet-->
-      <a id="connexion" class="bouton" href="#">  <!--A modifier--><span>Se connecter</span></a>
+      <?  session_start();
+			if(isset($_SESSION['utilisateur'])){
+				echo '<a id="connexion" class="bouton" href="déconnexion.php">  <span>Se déconnecter</span></a>';
+			}
+			else {
+				echo '<a id="connexion" class="bouton" href="connexion.php">  <span>Se connecter</span></a>';
+			}
+		?>
          <nav>
       <ul id="menu"> 
 		<!--LISTE DES ONGLETS-->
@@ -36,13 +46,13 @@
 		<section>
 			<article>
 				<h2>Connectez-vous</h2> 
-					<form action="profil.php" method="post">    <p class="p_centre">
+					<form action="connecter.php" method="post">    <p class="p_centre">
 						<label for="email" class="form-label">Email utilisé lors de la création de votre compte:</label><br />
-						<input type="email" class="form-control" id="email" name="email" aria-describedby="email-help" placeholder="you@exemple.com">
+						<input type="email" class="form-control" id="email" name="mail" aria-describedby="email-help" placeholder="you@exemple.com">
 					</p>
 					<p class="p_centre">
 						<label for="password" class="form-label">Mot de passe:</label><br />
-						<input type="password" class="form-control" id="password" name="password">
+						<input type="password" class="form-control" id="password" name="mdp1">
 					</p>
 					<p class="p_centre">
 						<button class="bouton" type="submit" class="btn btn-primary"><span>Connexion</span></button>
@@ -50,6 +60,8 @@
 				</form>
 				<p class="p_centre"><a class="bouton" href="recup_pass.php"><span>Vous avez oublié votre mot de passe</span></a></p>
 				<p class="p_centre"><a class="bouton" href="inscription_site.php"><span>Vous n'êtes pas encore inscrit</span></a></p>
+				<p class="p_centre"><a class="bouton" href="Accueil.php"><span>Retour</span></a></p>
+				
 
 			</article>
 		</section>
