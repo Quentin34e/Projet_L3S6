@@ -27,7 +27,7 @@
 		<!--LISTE DES ONGLETS-->
 		<li id="espace_ban_g"><img src="../img/Addictab_logo3.png" alt="logo Addictab" /></li>
          <li class="onglet"><a href="Accueil.php">Accueil</a></li>
-         <li class="onglet"><a href="Carte_interactive.php">Map</a></li>
+         <li class="onglet"><a href="test.php">Map</a></li>
          <li class="onglet"><a href="Forum.php">Forum</a></li>
          <li class="onglet"><a href="Page_Prevention.php">Prevention</a></li>       
          <li class="onglet"><a href="Ressources.php">Ressources</a></li>
@@ -48,7 +48,8 @@
 					<p>
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/iJ9AuzXfJBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</p>
-					<p><u>La HAS vous parle de l'arrêt du tabac. Durée 2min06 <u></p><br><br>
+					<p><u>La HAS vous parle de l'arrêt du tabac. Durée 2min06 <u></p>
+					<br><br>
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/VkxNX1GD-N4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<p><u>Cash investigation - Industrie du tabac : la grande manipulation (Intégrale). Durée 1h55 <u></p>
 				</article>

@@ -26,7 +26,7 @@
 		<!--LISTE DES ONGLETS-->
 		<li id="espace_ban_g"><img src="../img/Addictab_logo3.png" alt="logo Addictab" /></li>
          <li class="onglet"><a href="Accueil.php">Accueil</a></li>
-         <li class="onglet"><a href="Carte_interactive.php">Map</a></li>
+         <li class="onglet"><a href="test.php">Map</a></li>
          <li class="onglet"><a href="Forum.php">Forum</a></li>
          <li class="onglet"><a href="Page_Prevention.php">Prevention</a></li>       
          <li class="onglet"><a href="Ressources.php">Ressources</a></li>

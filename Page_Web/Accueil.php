@@ -45,13 +45,21 @@
                 <header>
                             <div id="entete"> 
    <h1>Accueil</h1><!--Nom au dessus de l'onglet-->
-      <a id="connexion" class="bouton" href="connexion.php">  <!--A modifier--><span>Se connecter</span></a>
+	  <?  session_start();
+			if(isset($_SESSION['utilisateur'])){
+				echo '<a id="connexion" class="bouton" href="déconnexion.php">  <span>Se déconnecter</span></a>';
+			}
+			else {
+				echo '<a id="connexion" class="bouton" href="connexion.php">  <span>Se connecter</span></a>';
+			}
+		?>	
+      
          <nav>
       <ul id="menu"> 
 		<!--LISTE DES ONGLETS-->
 		<li id="espace_ban_g"><img src="../img/Addictab_logo3.png" alt="logo Addictab" /></li>
          <li class="onglet"><a href="Accueil.php">Accueil</a></li>
-         <li class="onglet"><a href="Carte_interactive.php">Map</a></li>
+         <li class="onglet"><a href="test.php">Map</a></li>
          <li class="onglet"><a href="Forum.php">Forum</a></li>
          <li class="onglet"><a href="Page_Prevention.php">Prevention</a></li>       
          <li class="onglet"><a href="Ressources.php">Ressources</a></li>
@@ -62,12 +70,14 @@
 
 		<section>
 			<article>
-				<h2>Présentation</h2>            
+				<h2>Présentation</h2>    
+							
 					<p> Nous sommes un groupe d'étudiants d'une licence MIASHS.<br>
 					Cette année, nous devons travailler par groupe sur un projet qui a pour but<br>
 					de créer un site internet fonctionnel.<br>
 					Nous avons décider de traiter des données pour voir le taux de fumeurs d'un certain<br>
 					nombre de pays en fonction d'une année précise.
+					
 					</p>
 
 			</article>
@@ -106,8 +116,8 @@
 				<BR><INPUT TYPE=CHECKBOX NAME="choix10" VALUE=1> Faux</INPUT>
 				<BR><BR>
 				6. La cigarette électronique est inoffensive.
-				<BR><INPUT TYPE=CHECKBOX NAME="choix11" VALUE=0> Vrai</INPUT>
-				<BR><INPUT TYPE=CHECKBOX NAME="choix12" VALUE=1> Faux</INPUT>
+				<BR><INPUT TYPE=CHECKBOX NAME="choix11" VALUE=1> Vrai</INPUT>
+				<BR><INPUT TYPE=CHECKBOX NAME="choix12" VALUE=0> Faux</INPUT>
 				<BR><BR>
 				7. Chaque année la journée mondiale sans tabac a lieu le 31 mars
 				<BR><INPUT TYPE=CHECKBOX NAME="choix13" VALUE=0> Vrai</INPUT>
