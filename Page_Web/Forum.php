@@ -16,7 +16,14 @@
                 <header>
                             <div id="entete"> 
  <h1>FORUM</h1><!--Nom au dessus de l'onglet-->
-      <a id="connexion" class="bouton" href="connexion.php">  <!--A modifier--><span>Se connecter</span></a>
+      <?  session_start();
+			if(isset($_SESSION['utilisateur'])){
+				echo '<a id="connexion" class="bouton" href="déconnexion.php">  <span>Se déconnecter</span></a>';
+			}
+			else {
+				echo '<a id="connexion" class="bouton" href="connexion.php">  <span>Se connecter</span></a>';
+			}
+		?>	
          <nav>
       <ul id="menu"> 
 		<!--LISTE DES ONGLETS-->
@@ -31,18 +38,28 @@
    </nav>
 </div>
 
+
 <section>
 	<article>
-	<h2>NOUVEAU SUJET A ECRIRE ?</h2>
-	<p> IL FAUT S'ETRE IDENTIFIE ET ETRE CONNECTE<br>
-		Tu souhaites participer aux débats et intéragir avec la communauté ?<br>
-		inscris-toi !<br>
-		<p class="p_centre"><a class="bouton" href="inscription_site.php"><span>INSCRIPTION</span></a></p></br>
-		<p>Ton POST aura besoin d'un titre et une description !</br>
-		Le Formulaire est juste en-dessous :</br>
-		</p>
-		<p class="p_centre"><a class="bouton" href="ForumTopic.php"><span>ECRIRE UN NOUVEAU SUJET</span></a></p>
-	</p>
+	
+		 <?  session_start();
+			if(isset($_SESSION['utilisateur'])){
+					echo '<p>NOUVEAU POST !</br>
+							Le Formulaire est juste en-dessous :</br>
+						  </p>
+							<p class="p_centre"><a class="bouton" href="ForumTopic.php"><span>ECRIRE UN NOUVEAU SUJET</span></a></p>
+							</p>';
+			}
+			else {
+				echo '<h2>NOUVEAU SUJET A ECRIRE ?</h2>
+						<p> IL FAUT ETRE IDENTIFIE ET ETRE CONNECTE<br>
+							Tu souhaites participer aux débats et intéragir avec la communauté ?<br>
+							inscris-toi !<br>
+						<p class="p_centre"><a class="bouton" href="inscription_site.php"><span>INSCRIPTION</span></a></p></br>';
+			}
+		?>	
+		
+		
 	</article>
 		<article>
 	<h2>ACTUALITES</h2>
