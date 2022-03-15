@@ -39,14 +39,14 @@
 	</ul>
 	<a href="./insert_sujet.php">Insérer un sujet</a>
 <br />
+<table>
 
 <?php
 
 $base = mysql_connect ('localhost', 'root', 'root');
 	mysql_select_db ('adictab2', $base) ;
-
-
-
+	
+	
 	// on libère l'espace mémoire alloué pour cette reqête
 	mysql_free_result ($req);
 	// on ferme la connection à la base de données.
