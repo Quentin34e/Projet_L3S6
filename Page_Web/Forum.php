@@ -33,15 +33,40 @@
 
 <section>
 	<article>
-	<h2>Echanger c'est décider d'en parler !</h2>
-				<br>
-
-	<iframe width="560" height="315" src="../img/inscription.mp4" title="Forum" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<h2>NOUVEAU SUJET A ECRIRE ?</h2>
+	<p> IL FAUT S'ETRE IDENTIFIE ET ETRE CONNECTE<br>
+		Tu souhaites participer aux débats et intéragir avec la communauté ?<br>
+		inscris-toi !<br>
+		<p class="p_centre"><a class="bouton" href="inscription_site.php"><span>INSCRIPTION</span></a></p></br>
+		<p>Ton POST aura besoin d'un titre et une description !</br>
+		Le Formulaire est juste en-dessous :</br>
+		</p>
+		<p class="p_centre"><a class="bouton" href="ForumTopic.php"><span>ECRIRE UN NOUVEAU SUJET</span></a></p>
+	</p>
+	</article>
+		<article>
+	<h2>ACTUALITES</h2>
 	<ul>
-		<p class="p_centre"><a class="bouton" href="sante.php"><span>SANTE</span></a></p></li>
-		<p class="p_centre"><a class="bouton" href="chatroom.php"><span>CHATROOM</span></a></p></li>
+		<p class="p_centre"><a class="bouton" href="Forum.php"><span>TOP DES SUJETS</span></a></p></li>
+		<p class="p_centre"><a class="bouton" href="ForumTopic.php"><span>DERNIERES ACTUALITES</span></a></p></li>
 	</ul>
 	</article>
+
+
+	<article>
+	<h2>DU COTE SANTE</h2>
+	<br>
+	<iframe width="560" height="315" src="../img/inscription.mp4" title="Forum" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<ul>
+		<p class="p_centre"><a class="bouton" href="ForumTopic.php"><span>ECRIRE UN NOUVEAU SUJET</span></a></p></li>
+		<p class="p_centre"><a class="bouton" href="sante.php"><span>TOPIC</span></a></p></li>
+	</ul>
+	</article>
+	<article>
+	<h2>SALON DE DISCUSSION</h2>
+	<p class="p_centre"><a class="bouton" href="chatroom.php"><span>DISCUSSION</span></a></p></li>
+	</article>
+	
 </section>
 
 		
