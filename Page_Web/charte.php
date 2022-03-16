@@ -7,17 +7,41 @@
      <meta property="og:locale" content="fr_FR" />
      <meta name="description" content="Site officiel Addictab: Vous trouverez sur le site un grand nombre d'informations. Vous pourrez connaître les différentes conséquences du tabac et vous pourrez intéragir avec d'autres utilisateurs"/>
      <link rel="stylesheet" href="style.css" />
- 
+
+	 
      <title>Addictab</title>
-        <script type="text/javascript" src="../javascript/affichermasquer.js"> </script><!-- utile pour le diapo-->
+	<script language="javascript">
+      function score()
+	  { 
+		var s=0;
+        if(document.qcm1.choix3.checked){
+			s=s+1}      
+        if (document.qcm1.choix5.checked){
+			s=s+1;}		
+		if (document.qcm1.choix7.checked){
+			s=s+1;}		
+      return s;
+	  }
+    </script>
+	<script language="javascript">
+	function lancement()
+	{
+		var a =score();
+		var b = 3;
+		if (a==b){return window.location.href='forumVerif.php';}
+		else{alert('Vous n avez pas coché toutes les cases !');
+			return window.location.href='charte.php';}
+	}
+	</script>
+   <script type="text/javascript" src="../javascript/affichermasquer.js"> </script><!-- utile pour le diapo-->
 	</head>
 	
-	<body>
-		<!--ENTETE DU SITE-->
-	     <div id="bloc_page">
-                <header>
-                            <div id="entete"> 
-   <h1>NOUVEAU SUJET</h1><!--Nom au dessus de l'onglet-->
+<body>
+<!--ENTETE DU SITE-->
+<div id="bloc_page">
+ <header>
+ <div id="entete"> 
+ <h1>CHARTE</h1><!--Nom au dessus de l'onglet-->
       <?  session_start();
 			if(isset($_SESSION['utilisateur'])){
 				echo '<a id="connexion" class="bouton" href="déconnexion.php">  <span>Se déconnecter</span></a>';
@@ -25,7 +49,7 @@
 			else {
 				echo '<a id="connexion" class="bouton" href="connexion.php">  <span>Se connecter</span></a>';
 			}
-		?>
+		?>	
          <nav>
       <ul id="menu"> 
 		<!--LISTE DES ONGLETS-->
@@ -39,7 +63,7 @@
       </ul>
    </nav>
 </div><!--FIN ENTETE SITE-->
-<?
+		<?
 		if(isset($_SESSION['utilisateur'])){
 				
 				echo '<section><article>';
@@ -62,43 +86,48 @@
 				echo '</table></article></section>';
 		}
 		?>
-
+		<section>
+		</section>
 		<section>
 			<article>
-				 <h2>Ajouter un topic:</h2>
-					<form action="InsertSujet.php" method="post" autocomplete="off">
-					<p>
-					Intitulé :
-					<input type="text" name="n" value=<?php echo "'".$_POST['n']."'"; ?> />
-					</p>
-					<p>
-					Description :
-					<input type="text" name="p" value=<? echo "'".$_POST['p']."'"; ?> />
-					</p>
-					<p>
-					Date :
-					<input type="text" name="mail" value=<? echo "'".$_POST['mail']."'"; ?> />
-					</p>
-					<p>
-					Heure :
-					<input type="password" name="mdp1" value="" />
-					</p>
-					<p class="p_centre">
-						<button class="bouton" type="submit" class="btn btn-primary"><span>Envoyer</span></button>
-					</p>
-					</form>
+				<H2> Charte du Comportement</H2>
+				<HR>
 
+				<FORM NAME="qcm1">
+				<B>RESPECT D'AUTRUI</B><BR>
+				<BR>Je m'engage<BR>
+				
+				1. Ne pas tenir de propos injurieux, insultants, déplacés, grossiers et 
+				tout particulièrement éviter les propos sexistes et ou salaces et les 
+				comportements déplacés. 
+				<BR><INPUT TYPE=CHECKBOX NAME="choix3" VALUE=1> OUI</INPUT>
+				<BR><BR>
+				2. Adopter une attitude bienveillante envers autrui dans tous cadres 
+				possibles. Avoir un comportement respectueux et tolérant.
+				<BR><INPUT TYPE=CHECKBOX NAME="choix5" VALUE=1> OUI</INPUT>
+				<BR><BR>
+				3. Ne pas harceler qui que ce soit ni moralement, ni sexuellement, étant 
+				entendu que c’est le ou la destinataire du propos ou comportement qui est 
+				à même de juger, si il ou elle le ressent comme insultant ou déplacé.  
+				<BR><INPUT TYPE=CHECKBOX NAME="choix7" VALUE=1> OUI</INPUT>
+				<BR><BR>
+
+				
+				<INPUT TYPE="button" NAME="bouton" VALUE="JE M'ENGAGE" ONCLICK="lancement();">
+				<INPUT TYPE="button" NAME="bouton" VALUE="JE REFUSE" ONCLICK="window.location.href='charte.php'">
+				</INPUT>
+				</FORM>
 			</article>
 		</section>
 		 <footer><!--PIED DE PAGE-->
             
 
-			<a>Contact</a>
-			<ul>
-				<li>Mail : contact@addictab.fr</li>
-				<li>Numéro de téléphone: 06 XX XX XX XX</li>
-			</ul>
-			<p id="mention"><small>LE Quentin / GRIBAL Clement / LE Maxime / DOS SANTOS Yohann<br />Copyright ADDICTAB - Tous droits réservés.</small></p>
+			<h2 align="center">Contact</h2>
+				<p align="center"><a href="tel:06XXXXXXXX"><img src="../img/Logo_Telephone.jpg" alt="image téléphone" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px" /></a>
+				<a href="mailto:addictab123@gmail.com"><img src="../img/email.png" alt="image enveloppe" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px"/></a>
+				<a href="https://www.facebook.com/profile.php?id=100078106309466"><img src="../img/Logo_facebook.png" alt="logo facebook" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px"/></a>
+			<p id="mention"><small>Quentin / Clement / Maxime / Yohann<br />Copyright ADDICTAB - Tous droits réservés.</small></p>
+			<br><br>
 
           
 		 </footer> <!--FIN PIED DE PAGE-->

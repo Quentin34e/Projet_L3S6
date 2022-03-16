@@ -4,7 +4,7 @@ body{
 	font-family: 'Patrick Hand';
 	color: black;
 	padding: 0 0 0 0;
-	margin: 0 0 0 0;
+	margin: auto;
 	background-color: white;
 }
 #bloc_page{
@@ -17,6 +17,20 @@ body{
 	margin: auto;
 	
 }
+table {  
+font-family:sans-serif;}
+
+ th, td {
+    padding:.25em .5em;
+    text-align:left;
+  }
+  td {
+    background-color:#eee;    
+  }
+  th {
+    background-color:#009;
+    color:#fff;
+  }
 
 header{
 	border-radius: 50px;
@@ -31,6 +45,7 @@ header #entete{
 	align-content: flex-start;
 	text-align: center;
 }
+
 
 
 h1{
@@ -51,6 +66,7 @@ h1 em{
 	min-width: 70px;
 }
 #espace_ban_g img{
+	border-radius: 50%;
 	position: absolute;
 	left: -100px;
 	bottom: -10px;
@@ -136,6 +152,7 @@ nav ul .sous_onglet li a{
 
 
 picture img{
+	border-radius: 50%;
         width: 100%;
         height: 100%;
         display: block;
@@ -186,6 +203,7 @@ a:hover{
 	margin: 20px 0 0 0;
 }
 .article_miniature img{
+	border-radius: 50%;
 	float: left;
 	margin: 10px 20px 0px 0px;
 	border-radius: 30px;
@@ -213,6 +231,22 @@ article{
 	padding: 0px 0px 0px 0px;
 	text-align: justify;
 
+}
+article table {  
+font-family:sans-serif;
+}
+ article th, td {
+    padding:.25em .5em;
+    text-align:left;
+    
+  }
+article td {
+    background-color:#eee;    
+  }
+article th {
+    background-color:#009;
+    color:#fff;
+  }
 }
 article p{
 	margin: 10px 10px 0 10px;
@@ -272,7 +306,7 @@ article #brochure_partenaire{
 	padding: 0 0 0 0;
 }
 .photo_article img
-{
+{border-radius: 50%;
 	width: 98%;
 	border:  solid 5px rgb(46,92,172);
 	border-radius: 3px;
@@ -296,6 +330,7 @@ article #brochure_partenaire{
 		text-align:center;
 		padding: 0 0 0 0;
 		margin: 0 0 0 0;
+		margin: 0 0 0 0;
 
 	}
 	#liste_bureau li{
@@ -310,6 +345,7 @@ article #brochure_partenaire{
 		width: 160px;
 	}
 	#liste_bureau li img{
+		border-radius: 50%;
 		border-width: 2px;
 		border-bottom: solid rgb(0,20,130);
 		margin: 0 0 0 0;
@@ -371,6 +407,7 @@ article #brochure_partenaire{
 
 	#liste_articles li img
 	{
+		border-radius: 50%;
 		border-width: 2px;
 		border-bottom: solid rgb(103,78,48);
 		margin: 0 0 0 0;
@@ -464,6 +501,7 @@ article #brochure_partenaire{
 		padding: 0 0 0 0;
 	}
 	.entraineur img{
+		border-radius: 50%;
 		border-width: 2px;
 		border-bottom: solid rgb(0,20,130);
 		margin: 0 0 0 0;
@@ -494,6 +532,7 @@ article #brochure_partenaire{
 		height: 188px;
 	}
 	.liste_joueurs li img{
+		border-radius: 50%;
 		border-width: 2px;
 		border-bottom: solid rgb(0,20,130);
 		margin: 0 0 0 0;
@@ -529,6 +568,7 @@ article #brochure_partenaire{
 	height: auto;
 }
 #semaine img{
+	border-radius: 50%;
 	width: 50px;
 	height: auto;
 }
@@ -598,6 +638,7 @@ article #brochure_partenaire{
 	font-size: 18px;
 }
 #liste_contact img{
+	border-radius: 50%;
 	position: relative;
 	width: 30px;
 	margin: 10px 10px 0px 10px;
@@ -768,3 +809,7 @@ input{
         opacity: 1;
         right: 0;
       }
+	  
+	  img {
+border-radius: 50%;
+}
