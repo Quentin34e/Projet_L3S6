@@ -29,7 +29,7 @@
 		<!--LISTE DES ONGLETS-->
 		<li id="espace_ban_g"><img src="../img/Addictab_logo3.png" alt="logo Addictab"/></li>
          <li class="onglet"><a href="Accueil.php">Accueil</a></li>
-         <li class="onglet"><a href="Carte_interactive.php">Map</a></li>
+         <li class="onglet"><a href="test.php">Map</a></li>
          <li class="onglet"><a href="Forum.php">Forum</a></li>
          <li class="onglet"><a href="Page_Prevention.php">Prevention</a></li>       
          <li class="onglet"><a href="Ressources.php">Ressources</a></li>
@@ -66,12 +66,20 @@
 	</article>
 		<article>
 	<h2>TENDANCE</h2>
-	<ul>
+	<ul><p class="p_centre"><a class="bouton" href="charte.php"><span>DERNIERES ACTUALITES</span></a></p></li>
 		<p class="p_centre"><a class="bouton" href="charte.php"><span>TOP DES SUJETS</span></a></p></li>
-		<p class="p_centre"><a class="bouton" href="charte.php"><span>DERNIERES ACTUALITES</span></a></p></li>
 		<p class="p_centre"><a class="bouton" href="charte.php"><span>DISCUSSION</span></a></p></li>
+		<?  session_start();
+			if(isset($_SESSION['utilisateur'])){
+					echo '<p Sclass="p_centre"><a class="bouton" href="charte.php"><span>ECRIRE UN NOUVEAU SUJET</span></a></p></li>';
+		}
+		else
+		{
+			echo '<p class="p_centre"><a class="bouton" href="charte.php"><span>RUBRIQUE</span></a></p></li>';
+		}
+	?>	
 	</ul>
-	<table  border="50" cellpadding="15">
+	<table  border="30" cellpadding="15">
 		<tr>
 		<th>rubrique</th>
 		<th>date</th>
@@ -97,22 +105,6 @@
 		<td>Apres combien de temps voit-on les effets de ne plus fuùer ?</td>
 		</tr>
 		</table>
-	</article>
-
-
-	<article>
-	<br>
-	<ul>
-	<?  session_start();
-			if(isset($_SESSION['utilisateur'])){
-					echo '<p class="p_centre"><a class="bouton" href="charte.php"><span>ECRIRE UN NOUVEAU SUJET</span></a></p></li>';
-		}
-		else
-		{
-			echo '<p class="p_centre"><a class="bouton" href="charte.php"><span>RUBRIQUE</span></a></p></li>';
-		}
-	?>	
-	</ul>
 	</article>
 </section>
 

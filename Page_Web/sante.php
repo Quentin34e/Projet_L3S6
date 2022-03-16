@@ -66,9 +66,6 @@
 							echo '</td>';
 							echo '<td>';
 							echo "Bonjour Mr/Mme ".$_SESSION['utilisateur'][1]." ".$_SESSION['utilisateur'][0];
-							echo '<br>Vous êtes maintenant connecté sur notre site. <br>';
-							echo 'Vous pouvez modifier les informations vous concernant à tous moments en cliquand sur "mon profil".<br>';
-							echo 'Passez un agréable moment sur notre site.';
 							echo '</td>';
 						echo '</tr>';
 				echo '</table></article></section>';

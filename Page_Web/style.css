@@ -17,20 +17,6 @@ body{
 	margin: auto;
 	
 }
-table {  
-font-family:sans-serif;}
-
- th, td {
-    padding:.25em .5em;
-    text-align:left;
-  }
-  td {
-    background-color:#eee;    
-  }
-  th {
-    background-color:#009;
-    color:#fff;
-  }
 
 header{
 	border-radius: 50px;
@@ -47,7 +33,21 @@ header #entete{
 }
 
 
+table {  
+font-family:sans-serif;}
 
+ th, td {
+    padding:.25em .5em;
+    text-align:left;
+	color : blue);
+  }
+  td {
+    background-color:#eee;    
+  }
+  th {
+    background-color:#009;
+    color : rgb(255,0,0);;
+  }
 h1{
 	font-family: Georgia, serif;
 	font-size: 50px;
@@ -226,27 +226,13 @@ article{
 	border-bottom: solid black 5px;
 	background-color: rgb(191,52,85);
 	background: linear-gradient(0deg, rgba(191,52,85) 0%, rgba(191,52,85) 90%, rgba(141,2,45) 100%);
-	color: white;
+	color: blue;
 	margin: 0px 0px 20px 0px;
 	padding: 0px 0px 0px 0px;
 	text-align: justify;
 
 }
-article table {  
-font-family:sans-serif;
-}
- article th, td {
-    padding:.25em .5em;
-    text-align:left;
-    
-  }
-article td {
-    background-color:#eee;    
-  }
-article th {
-    background-color:#009;
-    color:#fff;
-  }
+
 }
 article p{
 	margin: 10px 10px 0 10px;
@@ -397,7 +383,7 @@ article #brochure_partenaire{
 	{
 		background: white;
 		border-radius: 10px;
-		border-color: rgb(0,20,130);
+		border-color: rgb(20,20,130);
 		border-style: double;
 		border-width: 10px;
 		margin:  10px 10px 10px 10px;
@@ -685,6 +671,7 @@ article #brochure_partenaire{
 }
 
 
+	
 
 iframe{
 	border: solid black 2px;
