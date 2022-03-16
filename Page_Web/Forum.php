@@ -37,30 +37,7 @@
       </ul>
    </nav>
 </div>
-<?
-		if(isset($_SESSION['utilisateur'])){
-				
-				echo '<section><article>';
-				echo '<h2>Bienvenue</h2>';
-				echo '<table>';
-				echo '		<tr><td><table border=1 width=170px>';
-				echo '			<tr><td align="center"> <img src= "../img/IconeProfil.png" alt="image profil" position="relative" width="40px" margin=" 15px 15px 15px 15px"top="5px"/> </td></tr>';
-							echo '<tr><td align="center"> ';
-							echo $_SESSION['utilisateur'][1]." ".$_SESSION['utilisateur'][0] ;
-							echo '</td></tr>';
-							echo '<tr><td align="center"> <a href=MonProfil.php align="left">Mon profil </a><img src="../img/Crayon.jpg" alt="image crayon" position="relative" width="30px" margin=" 15px 15px 15px 15px"top="5px"/></td></tr></table>';
-							echo '</td>';
-							echo '<td>';
-							echo "Bonjour Mr/Mme ".$_SESSION['utilisateur'][1]." ".$_SESSION['utilisateur'][0];
-							echo '<br>Vous êtes maintenant connecté sur notre site. <br>';
-							echo 'Vous pouvez modifier les informations vous concernant à tous moments en cliquand sur "mon profil".<br>';
-							echo 'Passez un agréable moment sur notre site.';
-							echo '</td>';
-						echo '</tr>';
-				echo '</table></article></section>';
-		}
-		?>
-		?>
+
 
 
 <section>
@@ -78,26 +55,53 @@
 				echo '<h2>NOUVEAU SUJET A ECRIRE ?</h2>
 						<p> IL FAUT ETRE IDENTIFIE ET ETRE CONNECTE<br>
 							Tu souhaites participer aux débats et intéragir avec la communauté ?<br>
-							inscris-toi !<br>
-						<p class="p_centre"><a class="bouton" href="inscription_site.php"><span>INSCRIPTION</span></a></p></br>';
+							Inscris-toi !<br>
+						<p class="p_centre"><a class="bouton" href="connexion.php"><span>CONNEXION</span></a></p></br>
+						<p class="p_centre"><a class="bouton" href="inscription_site.php"><span>INSCRIPTION</span></a></p></br>
+						';
 			}
 		?>	
 		
 		
 	</article>
 		<article>
-	<h2>ACTUALITES</h2>
+	<h2>TENDANCE</h2>
 	<ul>
 		<p class="p_centre"><a class="bouton" href="charte.php"><span>TOP DES SUJETS</span></a></p></li>
 		<p class="p_centre"><a class="bouton" href="charte.php"><span>DERNIERES ACTUALITES</span></a></p></li>
+		<p class="p_centre"><a class="bouton" href="charte.php"><span>DISCUSSION</span></a></p></li>
 	</ul>
+	<table  border="50" cellpadding="15">
+		<tr>
+		<th>rubrique</th>
+		<th>date</th>
+		<th>sujet</th>
+		</tr>
+		<tr>
+		<td>sante</td>
+		<td>23/03/2022</td>
+		<td>Les effets du tabac sur les poumons humains</td>
+		</tr>
+		<tr>
+		<td>sante</td>
+		<td>21/02/2022</td>
+		<td>Depuis 2 semaines je n'ai pas touché à une cigarette</td>
+		</tr>
+		<tr>
+		<td>sante</td>
+		<td>01/12/2020</td>
+		<td>Quels pays a le prix le moins cher pour un paquet de cigarette ?</td>
+		</tr>
+		<td>sante</td>
+		<td>03/12/2020</td>
+		<td>Apres combien de temps voit-on les effets de ne plus fuùer ?</td>
+		</tr>
+		</table>
 	</article>
 
 
 	<article>
-	<h2>RUBRIQUE</h2>
 	<br>
-	<iframe width="560" height="315" src="../img/inscription.mp4" title="Forum" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	<ul>
 	<?  session_start();
 			if(isset($_SESSION['utilisateur'])){
@@ -110,11 +114,6 @@
 	?>	
 	</ul>
 	</article>
-	<article>
-	<h2>SALON DE DISCUSSION</h2>
-	<p class="p_centre"><a class="bouton" href="charte.php"><span>DISCUSSION</span></a></p></li>
-	</article>
-	
 </section>
 
 		
