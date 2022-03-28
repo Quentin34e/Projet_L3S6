@@ -37,49 +37,44 @@
       </ul>
    </nav>
 </div>
+<section>
+			<article>
+				 <h2>Ajouter un topic:</h2>
+					<form action="insertSujet.php" method="post" autocomplete="off">
+					<p>
+					Intitulé :
+					<input type="text" name="intitule" value=<?php echo "'".$_POST['intitule']."'"; ?> />
+					</p>
+					<p>
+					Description :
+					<input type="text" name="description" value=<? echo "'".$_POST['description']."'"; ?> />
+					</p>
+					<?  session_start();
+					if(isset($_SESSION['utilisateur'])){
+						echo '<p>
+					<button class="bouton" type="submit" class="btn btn-primary"><span>Envoyer</span></button>
+					</p>';}
+					else {
+						echo '<p class="p_centre"><a class="bouton" href="connexion.php"><span>connexion</span></a></p></li>';
+						}
+		?>	
+					</form>
+
+			</article>
+		</section>
 
 
 
 <section>
-	<article>
 	
-		 <?  session_start();
-			if(isset($_SESSION['utilisateur'])){
-					echo '<p>NOUVEAU POST !</br>
-							Le Formulaire est juste en-dessous :</br>
-						  </p>
-							<p class="p_centre"><a class="bouton" href="ForumTopic.php"><span>ECRIRE UN NOUVEAU SUJET</span></a></p>
-							</p>';
-			}
-			else {
-				echo '<h2>NOUVEAU SUJET A ECRIRE ?</h2>
-						<p> IL FAUT ETRE IDENTIFIE ET ETRE CONNECTE<br>
-							Tu souhaites participer aux débats et intéragir avec la communauté ?<br>
-							Inscris-toi !<br>
-						<p class="p_centre"><a class="bouton" href="connexion.php"><span>CONNEXION</span></a></p></br>
-						<p class="p_centre"><a class="bouton" href="inscription_site.php"><span>INSCRIPTION</span></a></p></br>
-						';
-			}
-		?>	
-		
-		
-	</article>
 		<article>
 	<h2>TENDANCE</h2>
 	<ul><p class="p_centre"><a class="bouton" href="actualite.php"><span>DERNIERES ACTUALITES</span></a></p></li>
 		<p class="p_centre"><a class="bouton" href="topsujet.php"><span>TOP DES SUJETS</span></a></p></li>
 		<p class="p_centre"><a class="bouton" href="chatroom.php"><span>DISCUSSION</span></a></p></li>
-		<?  session_start();
-			if(isset($_SESSION['utilisateur'])){
-					echo '<p Sclass="p_centre"><a class="bouton" href="charte.php"><span>ECRIRE UN NOUVEAU SUJET</span></a></p></li>';
-		}
-		else
-		{
-			echo '<p class="p_centre"><a class="bouton" href="rubrique.php"><span>RUBRIQUE</span></a></p></li>';
-		}
-	?>	
+	
 	</ul>
-	<table  border="50" cellpadding="15">
+	<table id="forum" border="30" cellpadding="15">
 		<tr>
 		<th>rubrique</th>
 		<th>date</th>

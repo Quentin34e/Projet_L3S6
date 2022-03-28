@@ -83,7 +83,7 @@
 		</section>
 		<section>
 		<article>
-		<table border="1" cellpadding="15">
+		<table id="forum" border="30" cellpadding="15">
 		<tr>
 		<th>rubrique</th>
 		<th>date</th>

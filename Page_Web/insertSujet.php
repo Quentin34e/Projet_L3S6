@@ -2,30 +2,30 @@
 	<head>
 		<title>InsertSujet</title>
 		<?php
-			if($_POST['intitulé']=='' || $_POST['description']=='' || $_POST['date']=='' || $_POST['heure']=='' ){
+			if($_POST['intitule']=='' || $_POST['description']=='' ){
 				
-				header('Location: insertSujet.php');
+				header('Location: ForumTopic.php');
 				
 			}	
 			else{
-				header('Location: Forum.php');
+				header('Location: ForumVerif.php');
 				
 			}
-			function insertSujet($intitulé, $description, $date, $heure){
-				$sql="INSERT INTO `Post`(`intitulé`,`description`, `date`, `heure`) 
-				VALUES ('".$intitulé."','".$description."','".$date."','".$heure."')";
+			function insertSujet($intitule, $description){
+				$sql="INSERT INTO `post`(`intitule`,`description`) 
+				VALUES ('".$intitule."','".$description."')";
 				echo $sql;
 				return $sql;
 				
 			}
-				if($_POST['intitulé']=='' || $_POST['description']=='' || $_POST['date']=='' || $_POST['heure']=='' ){
+				if($_POST['intitule']=='' || $_POST['description']=='' ){
 						
-				}
+				} 
 				
 				else {
 					include('bd.php');
 					$bdd= getBD();
-					$rep = $bdd->query(enregistrer($_POST['intitulé'],$_POST['description'],$_POST['date'],$_POST['heure'] ));
+					$rep = $bdd->query(insertSujet($_POST['intitule'],$_POST['description']));
 	
 				}
 			

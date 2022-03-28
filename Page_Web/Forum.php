@@ -10,20 +10,27 @@
 	 <title>Addictab</title>
 	 
 </head>
+			
 <body>
-<!--ENTETE DU SITE-->
-<div id="bloc_page">
-<header>
-<div id="entete"> 
-<h1>FORUM</h1><!--Nom au dessus de l'onglet-->
+		<!--ENTETE DU SITE-->
+	     <div id="bloc_page">
+                <header>
+                            <div id="entete"> 
+   <h1>FORUM</h1><!--Nom au dessus de l'onglet-->
       <?  session_start();
 			if(isset($_SESSION['utilisateur'])){
+				header('Location: forumVerif.php');
 				echo '<a id="connexion" class="bouton" href="déconnexion.php">  <span>Se déconnecter</span></a>';
 			}
 			else {
 				echo '<a id="connexion" class="bouton" href="connexion.php">  <span>Se connecter</span></a>';
 			}
-		?>	
+		?>
+
+
+
+
+
     <nav>
       <ul id="menu"> 
 		<!--LISTE DES ONGLETS-->
@@ -37,7 +44,7 @@
       </ul>
    </nav>
 </div>
-
+	
 
 
 <section>
@@ -52,7 +59,7 @@
 							</p>';
 			}
 			else {
-				echo '<h2>NOUVEAU SUJET A ECRIRE ?</h2>
+					echo '<h2>NOUVEAU SUJET A ECRIRE ?</h2>
 						<p> IL FAUT ETRE IDENTIFIE ET ETRE CONNECTE<br>
 							Tu souhaites participer aux débats et intéragir avec la communauté ?<br>
 							Inscris-toi !<br>
