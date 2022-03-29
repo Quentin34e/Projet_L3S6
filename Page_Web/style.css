@@ -18,18 +18,18 @@ body{
 	
 }
 #forum table {  
-font-family:sans-serif;}
+font-family:sans-serif;
+}
 
 #forum th, td {
     padding:.25em .5em;
-    text-align:left;
+    text-align: center;
   }
 #forum  td {
     background-color:black;    
   }
 #forum  th {
     background-color:black;
-    color:#fff;
   }
 
 header{
@@ -241,10 +241,10 @@ font-family:sans-serif;
     
   }
 article td {
-    background-color:#eee;    
+    background-color:black;    
   }
 article th {
-    background-color:#009;
+    background-color:black;
     color:#fff;
   }
 }
@@ -611,7 +611,7 @@ article #brochure_partenaire{
 	font-size: 30px;
 }
 #semaine .td_vide{
-	background-color: white;
+	background-color: black;
 	color: rgb(191,52,85);
 	padding: 0 0 0 1px;
 }
@@ -666,7 +666,7 @@ article #brochure_partenaire{
 }
 #tableau_classement .lienblanc_pt{
 	background: linear-gradient(0deg, rgb(191,52,85) 0%, rgb(150,50,50) 100%);
-	color: white;
+	color: black;
 }
 
 

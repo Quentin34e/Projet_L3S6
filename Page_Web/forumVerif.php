@@ -29,7 +29,7 @@
 		<!--LISTE DES ONGLETS-->
 		<li id="espace_ban_g"><img src="../img/Addictab_logo3.png" alt="logo Addictab"/></li>
          <li class="onglet"><a href="Accueil.php">Accueil</a></li>
-         <li class="onglet"><a href="Carte_interactive.php">Map</a></li>
+         <li class="onglet"><a href="test.php">Map</a></li>
          <li class="onglet"><a href="Forum.php">Forum</a></li>
          <li class="onglet"><a href="Page_Prevention.php">Prevention</a></li>       
          <li class="onglet"><a href="Ressources.php">Ressources</a></li>
@@ -66,39 +66,26 @@
 
 
 <section>
-	
-		<article>
-	<h2>TENDANCE</h2>
-	<ul><p class="p_centre"><a class="bouton" href="actualite.php"><span>DERNIERES ACTUALITES</span></a></p></li>
-		<p class="p_centre"><a class="bouton" href="topsujet.php"><span>TOP DES SUJETS</span></a></p></li>
-		<p class="p_centre"><a class="bouton" href="chatroom.php"><span>DISCUSSION</span></a></p></li>
-	
-	</ul>
-	<table id="forum" border="30" cellpadding="15">
-		<tr>
-		<th>rubrique</th>
-		<th>date</th>
-		<th>sujet</th>
-		</tr>
-		<tr>
-		<td>sante</td>
-		<td>23/03/2022</td>
-		<td>Les effets du tabac sur les poumons humains</td>
-		</tr>
-		<tr>
-		<td>sante</td>
-		<td>21/02/2022</td>
-		<td>Depuis 2 semaines je n'ai pas touché à une cigarette</td>
-		</tr>
-		<tr>
-		<td>sante</td>
-		<td>01/12/2020</td>
-		<td>Quels pays a le prix le moins cher pour un paquet de cigarette ?</td>
-		</tr>
-		<td>sante</td>
-		<td>03/12/2020</td>
-		<td>Apres combien de temps voit-on les effets de ne plus fuùer ?</td>
-		</tr>
+<article>
+<table id="forum" border="30" cellpadding="15">
+<tr>
+		<th>Description</th>
+		<th>Intitule</th>
+		<th>IdPost</th>
+</tr>
+<?php
+require ('bd.php');
+$PDO = getBD();
+$re= $PDO -> query('select * from post');
+
+	while ($mat = $re-> fetch()){
+		echo '<tr><td>'.$mat['description'].'</td>';
+		echo '<td>'.$mat['intitule'].'</td>';
+		echo '<td>'.$mat['idPost'].'</td></br>';
+}
+	$re ->closeCursor();
+
+?>
 		</table>
 	</article>
 </section>

@@ -86,6 +86,11 @@
 		}
 	?>	
 	</ul>
+	
+	
+ 
+ 
+
 	<table id="forum" border="30" cellpadding="15">
 		<tr>
 		<th>rubrique</th>
