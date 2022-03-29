@@ -17,20 +17,7 @@ body{
 	margin: auto;
 	
 }
-#forum table {  
-font-family:sans-serif;
-}
 
-#forum th, td {
-    padding:.25em .5em;
-    text-align: center;
-  }
-#forum  td {
-    background-color:black;    
-  }
-#forum  th {
-    background-color:black;
-  }
 
 header{
 	border-radius: 50px;
@@ -241,11 +228,11 @@ font-family:sans-serif;
     
   }
 article td {
-    background-color:black;    
+    background-color:rgba(117, 190, 218, 0.0);    
   }
 article th {
-    background-color:black;
-    color:#fff;
+    background-color:rgba(117, 190, 218, 0.0);
+    color:red;
   }
 }
 article p{
@@ -552,7 +539,7 @@ article #brochure_partenaire{
 	}
 
 #meteo{
-	background-color: rgb(46,92,172);
+	background-color: rgba(117, 190, 218, 0.0);
 	border-radius: 3px;
 	margin: 10px 0 0 0;
 	padding:  5px 5px 5px 5px;
@@ -577,13 +564,13 @@ article #brochure_partenaire{
 	margin: auto;
 	border: none;
 	border-radius: 5px;
-	background-color: rgba(191,52,85,0);
+	background-color: rgba(117, 190, 218, 0.0);
 }
 #semaine .titre_tableau_calendrier{
 	padding: 10px 0 10px 0;
 }
 #semaine table .titrepoule{
-	background: linear-gradient(0deg, rgba(0,100,100,1) 0%, rgba(114,185,255,1) 7%, rgba(255,255,255,0.7) 24%, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 80%, rgba(255,255,255,0) 100%);
+	background: rgba(117, 190, 218, 0.0);
 	border-top-left-radius: 50px;
 	text-align: center;
 	font-size: 20px;
@@ -612,15 +599,15 @@ article #brochure_partenaire{
 }
 #semaine .td_vide{
 	background-color: black;
-	color: rgb(191,52,85);
-	padding: 0 0 0 1px;
+	color: #bbff00;
+	padding: 0 0 0 0px;
 }
 #semaine table .lienquestion_pt{
 	background-color: rgb(255,255,255);
 	padding: 0 10px 0 10px;
 	font-size: 20px;
 	text-align: center;
-	color: rgb(0,0,0);
+	color: rgba(117, 190, 218, 0.0);
 	font-family: Lalezar;
 }
 #semaine table .liengris_pt{
@@ -630,7 +617,7 @@ article #brochure_partenaire{
 	color: rgb(0,0,0);
 }
 #semaine table .liengris{
-	background-color: rgb(255,255,255);
+	background-color: #bbff00;
 	text-align: center;
 }
 #liste_contact li{
@@ -659,15 +646,32 @@ article #brochure_partenaire{
 	}
 #tableau_classement td{
 	font-size: 0.7em;
-	background-color: rgb(114,185,255);
+	background-color: #bbff00;
 	border: solid rgb(150,200,255) 1px;
 	text-align: center;
 	
 }
 #tableau_classement .lienblanc_pt{
-	background: linear-gradient(0deg, rgb(191,52,85) 0%, rgb(150,50,50) 100%);
+	background: #bbff00;
 	color: black;
 }
+#forum table {  
+	margin: auto;
+	font-family:sans-serif;
+}
+
+#forum th, td {
+	margin: auto;
+    text-align: center;
+  }
+#forum  td {
+	margin: auto;
+    background-color:black;    
+  }
+#forum  th {
+	margin: auto;
+    background-color:black;
+  }
 
 
 .signature{
