@@ -10,31 +10,24 @@
 	 <title>Addictab</title>
 	 
 </head>
-			
 <body>
-		<!--ENTETE DU SITE-->
-	     <div id="bloc_page">
+ <div id="bloc_page">
                 <header>
                             <div id="entete"> 
-   <h1>FORUM</h1><!--Nom au dessus de l'onglet-->
-      <?  session_start();
+   <h1>Valide</h1><!--Nom au dessus de l'onglet-->
+	  <?  session_start();
 			if(isset($_SESSION['utilisateur'])){
-				header('Location: forumVerif.php');
 				echo '<a id="connexion" class="bouton" href="déconnexion.php">  <span>Se déconnecter</span></a>';
 			}
 			else {
 				echo '<a id="connexion" class="bouton" href="connexion.php">  <span>Se connecter</span></a>';
 			}
-		?>
-
-
-
-
-
-    <nav>
+		?>	
+      
+         <nav>
       <ul id="menu"> 
 		<!--LISTE DES ONGLETS-->
-		<li id="espace_ban_g"><img src="../img/Addictab_logo3.png" alt="logo Addictab"/></li>
+		<li id="espace_ban_g"><img src="../img/Addictab_logo3.png" alt="logo Addictab" /></li>
          <li class="onglet"><a href="Accueil.php">Accueil</a></li>
          <li class="onglet"><a href="test.php">Map</a></li>
          <li class="onglet"><a href="Forum.php">Forum</a></li>
@@ -43,56 +36,33 @@
         
       </ul>
    </nav>
-</div>
-	
-
-
+<!--ENTETE DU SITE-->
 <section>
-	<article>
-	
-		 <?  session_start();
-			if(isset($_SESSION['utilisateur'])){
-					echo '<p>NOUVEAU POST !</br>
-							Le Formulaire est juste en-dessous :</br>
-						  </p>
-							<p class="p_centre"><a class="bouton" href="charte.php"><span>ECRIRE UN NOUVEAU SUJET</span></a></p>
-							</p>';
-			}
-			else {
-					echo '<h2>NOUVEAU SUJET A ECRIRE ?</h2>
-						<p> IL FAUT ETRE IDENTIFIE ET ETRE CONNECTE<br>
-							Tu souhaites participer aux débats et intéragir avec la communauté ?<br>
-							Inscris-toi !<br>
-						<p class="p_centre"><a class="bouton" href="connexion.php"><span>CONNEXION</span></a></p></br>
-						<p class="p_centre"><a class="bouton" href="inscription_site.php"><span>INSCRIPTION</span></a></p>
-						';
-			}
-		?>	
-		
-<table id="forum" border="30" cellpadding="15">
-<tr>
-		<th>Description</th>
-		<th>Rubrique</th>
-		<th>IdPost</th>
-</tr>
-<?php
-require ('bd.php');
-$PDO = getBD();
-$re= $PDO -> query('select * from post ORDER by idPost DESC LIMIT 5');
+			<article>
+			<h2>Mise à Jour de la base donnée.</h2>
+				<p>Félicitation votre sujet a été ajouté !</p> 
+					<table id="forum" border="30" cellpadding="15">
+						<tr>
+						<th>Description</th>
+						<th>Rubrique</th>
+						<th>IdPost</th>
+						</tr>
+						<?php
+						require ('bd.php');
+						$PDO = getBD();
+						$re= $PDO -> query('select * from post ORDER by idPost DESC LIMIT 8');
 
-	while ($mat = $re-> fetch()){
-		echo '<tr><td>'.$mat['description'].'</td>';
-		echo '<td>'.$mat['intitule'].'</td>';
-		echo '<td>'.$mat['idPost'].'</td></br>';
+						while ($mat = $re-> fetch()){
+						echo '<tr><td>'.$mat['description'].'</td>';
+						echo '<td>'.$mat['intitule'].'</td>';
+						echo '<td>'.$mat['idPost'].'</td></br>';						
 }
 	$re ->closeCursor();
 
 ?>
-</table>
-
+					</table>
+			</article>
 </section>
-
-		
 
  <footer><!--PIED DE PAGE-->
             
@@ -105,7 +75,8 @@ $re= $PDO -> query('select * from post ORDER by idPost DESC LIMIT 5');
 			<br><br>
 
           
-		 </footer> <!--FIN PIED DE PAGE-->
+</footer> <!--FIN PIED DE PAGE-->
 		 
 	</body>
+	
 </html>

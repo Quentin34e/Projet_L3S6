@@ -72,8 +72,8 @@
 				
 				echo '<section><article>';
 				echo '<h2>Bienvenue</h2>';
-				echo '<table>';
-				echo '		<tr><td><table border=1 width=170px>';
+				echo '<table id=forum>';
+				echo '		<tr><td><table id=forum border=1 width=170px>';
 				echo '			<tr><td align="center"> <img src= "../img/IconeProfil.png" alt="image profil" position="relative" width="40px" margin=" 15px 15px 15px 15px"top="5px"/> </td></tr>';
 							echo '<tr><td align="center"> ';
 							echo $_SESSION['utilisateur'][1]." ".$_SESSION['utilisateur'][0] ;

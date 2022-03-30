@@ -40,24 +40,19 @@
 	
 
 <section>
-<article>
-<h2>FORUM</h2>
-</br>
-	<a class="bouton" href="sante.php"><span>SANTE</span></a>
-	<a class="bouton" href="general.php"><span>GENERAL</span></a>
-	<a class="bouton" href="experience.php"><span>EXPERIENCE</span></a>
-	
-	</table>
+	<article>
+		<h2>FORUM</h2>	
+	<table>
 				 <h2>Ajouter un topic:</h2>
 					<form action="insertSujet.php" method="post" autocomplete="off">
 					<p>
 					Rubrique :
 					<input type="text" name="intitule" value=<?php echo "'".$_POST['intitule']."'"; ?> />
-					</p>
+					<br/>indiquer : sante ou general ou experience</p>
 					<p>
 					Description :
-					<input type="text" name="description" value=<? echo "'".$_POST['description']."'"; ?> />
-					</p>
+					<input type="text" name="description" value=<?php echo "'".$_POST['description']."'"; ?> />
+					<br/>maximum : 300 caractères   </p>
 					<?  session_start();
 					if(isset($_SESSION['utilisateur'])){
 						echo '<p>
@@ -68,31 +63,33 @@
 						}
 		?>	
 					</form>
+	</table>
+	</article>
 </section>
 <section>	
-
-<table id="forum" border="30" cellpadding="15">
-<tr>
+	<article>
+		<a class="bouton" href="sante.php"><span>SANTE</span></a>
+		<a class="bouton" href="general.php"><span>GENERAL</span></a>
+		<a class="bouton" href="experience.php"><span>EXPERIENCE</span></a>
+		<table id="forum" border="30" cellpadding="15">
+		<tr>
 		<th>Description</th>
 		<th>Rubrique</th>
 		<th>IdPost</th>
-</tr>
+		</tr>
 <?php
 require ('bd.php');
 $PDO = getBD();
-$re= $PDO -> query('select * from post');
-
-	while ($mat = $re-> fetch()){
+$re= $PDO -> query('select * from post ORDER by idPost DESC LIMIT 5');
+while ($mat = $re-> fetch()){
 		echo '<tr><td>'.$mat['description'].'</td>';
 		echo '<td>'.$mat['intitule'].'</td>';
 		echo '<td>'.$mat['idPost'].'</td></br>';
-}
+	}
 	$re ->closeCursor();
-
 ?>
-	
-</article>
-
+		</table>
+	</article>
 </section>
 
 		

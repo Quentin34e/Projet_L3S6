@@ -37,30 +37,7 @@
       </ul>
    </nav>
 </div>
-<?
-		if(isset($_SESSION['utilisateur'])){
-				
-				echo '<section><article>';
-				echo '<h2>Bienvenue</h2>';
-				echo '<table>';
-				echo '		<tr><td><table border=1 width=170px>';
-				echo '			<tr><td align="center"> <img src= "../img/IconeProfil.png" alt="image profil" position="relative" width="40px" margin=" 15px 15px 15px 15px"top="5px"/> </td></tr>';
-							echo '<tr><td align="center"> ';
-							echo $_SESSION['utilisateur'][1]." ".$_SESSION['utilisateur'][0] ;
-							echo '</td></tr>';
-							echo '<tr><td align="center"> <a href=MonProfil.php align="left">Mon profil </a><img src="../img/Crayon.jpg" alt="image crayon" position="relative" width="30px" margin=" 15px 15px 15px 15px"top="5px"/></td></tr></table>';
-							echo '</td>';
-							echo '<td>';
-							echo "Bonjour Mr/Mme ".$_SESSION['utilisateur'][1]." ".$_SESSION['utilisateur'][0];
-							echo '<br>Vous êtes maintenant connecté sur notre site. <br>';
-							echo 'Vous pouvez modifier les informations vous concernant à tous moments en cliquand sur "mon profil".<br>';
-							echo 'Passez un agréable moment sur notre site.';
-							echo '</td>';
-						echo '</tr>';
-				echo '</table></article></section>';
-		}
-		?>
-		?>
+
 
 
 <section>

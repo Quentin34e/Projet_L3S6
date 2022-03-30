@@ -29,7 +29,7 @@
 <div id="bloc_page">
 <header>
 <div id="entete"> 
-<h1>FORUM</h1><!--Nom au dessus de l'onglet-->
+<h1>SANTE</h1><!--Nom au dessus de l'onglet-->
       <?  session_start();
 			if(isset($_SESSION['utilisateur'])){
 				echo '<a id="connexion" class="bouton" href="déconnexion.php">  <span>Se déconnecter</span></a>';
@@ -51,137 +51,59 @@
       </ul>
    </nav>
 </div><!--FIN ENTETE SITE-->
-		<?
-		if(isset($_SESSION['utilisateur'])){
-				
-				echo '<section><article>';
-				echo '<h2>Bienvenue</h2>';
-				echo '<table>';
-				echo '		<tr><td><table border=1 width=170px>';
-				echo '			<tr><td align="center"> <img src= "../img/IconeProfil.png" alt="image profil" position="relative" width="40px" margin=" 15px 15px 15px 15px"top="5px"/> </td></tr>';
-							echo '<tr><td align="center"> ';
-							echo $_SESSION['utilisateur'][1]." ".$_SESSION['utilisateur'][0] ;
-							echo '</td></tr>';
-							echo '<tr><td align="center"> <a href=MonProfil.php align="left">Mon profil </a><img src="../img/Crayon.jpg" alt="image crayon" position="relative" width="30px" margin=" 15px 15px 15px 15px"top="5px"/></td></tr></table>';
-							echo '</td>';
-							echo '<td>';
-							echo "Bonjour Mr/Mme ".$_SESSION['utilisateur'][1]." ".$_SESSION['utilisateur'][0];
-							echo '</td>';
-						echo '</tr>';
-				echo '</table></article></section>';
-		}
-		?>
 		<section>
-			<article>
-				<h2>SUJET SANTE</h2>    
-							
-					<p> 
-					
-					</p>
+<article>
+<h2>FORUM</h2>
+</br>
+	<a class="bouton" href="sante.php"><span>SANTE</span></a>
+	<a class="bouton" href="general.php"><span>GENERAL</span></a>
+	<a class="bouton" href="experience.php"><span>EXPERIENCE</span></a>
+	
 
-			</article>
-		</section>
-		<section>
-		<article>
-		<table id="forum" border="30" cellpadding="15">
-		<tr>
-		<th>rubrique</th>
-		<th>date</th>
-		<th>sujet</th>
-		</tr>
-		<tr>
-		<td>sante</td>
-		<td>23/03/2022</td>
-		<td>Les effets du tabac sur les poumons humains</td>
-		</tr>
-		<tr>
-		<td>sante</td>
-		<td>21/02/2022</td>
-		<td>Depuis 2 semaines je n'ai pas touché à une cigarette</td>
-		</tr>
-		<tr>
-		<td>sante</td>
-		<td>01/12/2020</td>
-		<td>Quels pays a le prix le moins cher pour un paquet de cigarette ?</td>
-		</tr>
-		<td>sante</td>
-		<td>03/12/2020</td>
-		<td>Apres combien de temps voit-on les effets de ne plus fuùer ?</td>
-		</tr>
-		</table>
-		</article>
-		</section>
-		
-		<article>
-		 <?  session_start();
-			if(isset($_SESSION['utilisateur'])){
-					echo '<p>NOUVEAU POST !</br>
-							Le Formulaire est juste en-dessous :</br>
-						  </p>
-							<p class="p_centre"><a class="bouton" href="ForumTopic.php"><span>ECRIRE UN NOUVEAU SUJET</span></a></p>
-							</p>';
-			}
-			else {
-				echo '<h2>NOUVEAU SUJET A ECRIRE ?</h2>
-						<p> IL FAUT ETRE IDENTIFIE ET ETRE CONNECTE<br>
-							Tu souhaites participer aux débats et intéragir avec la communauté ?<br>
-							inscris-toi !<br>
-						<p class="p_centre"><a class="bouton" href="inscription_site.php"><span>INSCRIPTION</span></a></p></br>';
-			}
-		?>	
-		</article>
-		<article>
-		<?  session_start();
-			if(isset($_SESSION['utilisateur'])){
-					echo '<p class="p_centre"><a class="bouton" href="ForumTopic.php"><span>ECRIRE UN NOUVEAU SUJET</span></a></p></li>';
-		}
-		else
-		{
-			echo '<p class="p_centre"><a class="bouton" href="rubrique.php"><span>TOPIC</span></a></p></li>';
-		}
-		?>	
-		</article>
-		
-			<article>
-				<h2>COMMENTAIRE SANTE</h2>    
-							
-					<p> 
-					
-					</p>
+<table id="forum" border="30" cellpadding="15">
+<tr>
+		<th>Description</th>
+		<th>Rubrique</th>
+		<th>IdPost</th>
+</tr>
+<?php
+require ('bd.php');
+$PDO = getBD();
+$re= $PDO -> query('select * from post where intitule="sante" ORDER by idPost DESC LIMIT 8');
 
-			</article>
-		</section>
-		<section>
-		<article>
-		<table border="1" cellpadding="15">
-		<tr>
-		<th>utilisateur</th>
-		<th>date</th>
-		<th>commentaire</th>
-		</tr>
-		<tr>
-		<td>Jojo77</td>
-		<td>23/03/2022</td>
-		<td>Le tabac est le premier facteur de risque de cancer du poumon[..]</td>
-		</tr>
-		<tr>
-		<td>isabouch34</td>
-		<td>21/02/2022</td>
-		<td>Merci à la communauté addictab grace à vous [..] </td>
-		</tr>
-		<tr>
-		<td>xxp45Dit</td>
-		<td>01/12/2020</td>
-		<td>La Tunisie est un pays qui vend a des tarifs attractifs[..]</td>
-		</tr>
-		<td>sante.pro11</td>
-		<td>03/12/2020</td>
-		<td>Dès les 15 premières minutes, le rythme cardiaque ralentit[..]</td>
-		</tr>
+	while ($mat = $re-> fetch()){
+		echo '<tr><td>'.$mat['description'].'</td>';
+		echo '<td>'.$mat['intitule'].'</td>';
+		echo '<td>'.$mat['idPost'].'</td></br>';
+}
+	$re ->closeCursor();
+
+?>
 		</table>
-		</article>
-		</section>
-		</section>
+				  <h2>Ajouter un topic:</h2>
+					<form action="insertSujet.php" method="post" autocomplete="off">
+					<p>
+					Rubrique :
+					<input type="text" name="intitule" value=<?php echo "'".$_POST['intitule']."'"; ?> />
+					<br/>indiquer : sante ou general ou experience</p>
+					<p>
+					Description :
+					<input type="text" name="description" value=<?php echo "'".$_POST['description']."'"; ?> />
+					<br/>maximum : 300 caractères   </p>
+					<?  session_start();
+					if(isset($_SESSION['utilisateur'])){
+						echo '<p>
+					<button class="bouton" type="submit" class="btn btn-primary"><span>Envoyer</span></button>
+					</p>';}
+					else {
+						echo '<p class="p_centre"><a class="bouton" href="connexion.php"><span>connexion</span></a></p></li>';
+						}
+		?>	
+					</form>
+</article>
+
+</section>
+
 		 <footer><!--PIED DE PAGE-->
             
 

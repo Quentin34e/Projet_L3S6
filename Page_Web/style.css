@@ -660,7 +660,18 @@ article #brochure_partenaire{
 	font-family:sans-serif;
 }
 
+#forum th, td {
 
+    text-align: center;
+  }
+#forum  td {
+	margin: auto;
+    background-color:black;    
+  }
+#forum  th {
+
+    background-color:black;
+  }
 
 
 .signature{

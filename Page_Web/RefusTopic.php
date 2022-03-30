@@ -10,31 +10,24 @@
 	 <title>Addictab</title>
 	 
 </head>
-			
 <body>
-		<!--ENTETE DU SITE-->
-	     <div id="bloc_page">
+ <div id="bloc_page">
                 <header>
                             <div id="entete"> 
-   <h1>FORUM</h1><!--Nom au dessus de l'onglet-->
-      <?  session_start();
+   <h1>Refus</h1><!--Nom au dessus de l'onglet-->
+	  <?  session_start();
 			if(isset($_SESSION['utilisateur'])){
-				header('Location: forumVerif.php');
 				echo '<a id="connexion" class="bouton" href="déconnexion.php">  <span>Se déconnecter</span></a>';
 			}
 			else {
 				echo '<a id="connexion" class="bouton" href="connexion.php">  <span>Se connecter</span></a>';
 			}
-		?>
-
-
-
-
-
-    <nav>
+		?>	
+      
+         <nav>
       <ul id="menu"> 
 		<!--LISTE DES ONGLETS-->
-		<li id="espace_ban_g"><img src="../img/Addictab_logo3.png" alt="logo Addictab"/></li>
+		<li id="espace_ban_g"><img src="../img/Addictab_logo3.png" alt="logo Addictab" /></li>
          <li class="onglet"><a href="Accueil.php">Accueil</a></li>
          <li class="onglet"><a href="test.php">Map</a></li>
          <li class="onglet"><a href="Forum.php">Forum</a></li>
@@ -43,56 +36,43 @@
         
       </ul>
    </nav>
-</div>
-	
-
-
+<!--ENTETE DU SITE-->
 <section>
-	<article>
-	
-		 <?  session_start();
-			if(isset($_SESSION['utilisateur'])){
-					echo '<p>NOUVEAU POST !</br>
-							Le Formulaire est juste en-dessous :</br>
-						  </p>
-							<p class="p_centre"><a class="bouton" href="charte.php"><span>ECRIRE UN NOUVEAU SUJET</span></a></p>
-							</p>';
-			}
-			else {
-					echo '<h2>NOUVEAU SUJET A ECRIRE ?</h2>
-						<p> IL FAUT ETRE IDENTIFIE ET ETRE CONNECTE<br>
-							Tu souhaites participer aux débats et intéragir avec la communauté ?<br>
-							Inscris-toi !<br>
-						<p class="p_centre"><a class="bouton" href="connexion.php"><span>CONNEXION</span></a></p></br>
-						<p class="p_centre"><a class="bouton" href="inscription_site.php"><span>INSCRIPTION</span></a></p>
-						';
-			}
-		?>	
-		
-<table id="forum" border="30" cellpadding="15">
-<tr>
-		<th>Description</th>
-		<th>Rubrique</th>
-		<th>IdPost</th>
-</tr>
-<?php
-require ('bd.php');
-$PDO = getBD();
-$re= $PDO -> query('select * from post ORDER by idPost DESC LIMIT 5');
-
-	while ($mat = $re-> fetch()){
-		echo '<tr><td>'.$mat['description'].'</td>';
-		echo '<td>'.$mat['intitule'].'</td>';
-		echo '<td>'.$mat['idPost'].'</td></br>';
-}
-	$re ->closeCursor();
-
-?>
-</table>
-
+			<article>
+			<h2>Echec</h2>
+				<p>Votre sujet n'a pas été ajouté.</br>
+				Vérifier votre saisie dans Rubrique et description</br>
+				Verifier que l'information ecrite dans Rubrique</br>
+				Soit l'un des 3 termes suivants :</br>
+				</br>sante
+				</br>experience
+				</br>general</p>
+				<p>Si ce n'est pas le cas veuillez réitérer votre action.</p>
+				<table>
+				  <h2>Ajouter un topic:</h2>
+					<form action="insertSujet.php" method="post" autocomplete="off">
+					<p>
+					Rubrique :
+					<input type="text" name="intitule" value=<?php echo "'".$_POST['intitule']."'"; ?> />
+					<br/>indiquer : sante ou general ou experience</p>
+					<p>
+					Description :
+					<input type="text" name="description" value=<?php echo "'".$_POST['description']."'"; ?> />
+					<br/>maximum : 300 caractères   </p>
+					<?  session_start();
+					if(isset($_SESSION['utilisateur'])){
+						echo '<p>
+					<button class="bouton" type="submit" class="btn btn-primary"><span>Envoyer</span></button>
+					</p>';}
+					else {
+						echo '<p class="p_centre"><a class="bouton" href="connexion.php"><span>connexion</span></a></p></li>';
+						}
+					?>	
+					</form>
+				</table>
+					
+			</article>
 </section>
-
-		
 
  <footer><!--PIED DE PAGE-->
             
@@ -105,7 +85,8 @@ $re= $PDO -> query('select * from post ORDER by idPost DESC LIMIT 5');
 			<br><br>
 
           
-		 </footer> <!--FIN PIED DE PAGE-->
+</footer> <!--FIN PIED DE PAGE-->
 		 
 	</body>
+	
 </html>
