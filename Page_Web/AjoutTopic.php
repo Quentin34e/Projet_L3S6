@@ -41,6 +41,7 @@
 			<article>
 			<h2>Mise à Jour de la base donnée.</h2>
 				<p>Félicitation votre sujet a été ajouté !</p> 
+				<p><a class="bouton" href="forumVerif.php"><span>RETOUR</span></a></p>
 					<table id="forum" border="30" cellpadding="15">
 						<tr>
 						<th>Description</th>
