@@ -10,17 +10,7 @@
 
 	 
      <title>Addictab</title>
-	<script language="javascript">
-      function score(){ 
-		var s=0;
-        if(document.qcm1.choix3.checked){
-			s=s+1}      
-        if (document.qcm1.choix5.checked){
-			s=s+1;}		
-		if (document.qcm1.choix7.checked){
-			s=s+1;}		
-      alert('Vous avez validé '+s+'/3 cases.');}
-    </script>
+
    <script type="text/javascript" src="../javascript/affichermasquer.js"> </script><!-- utile pour le diapo-->
 	</head>
 	
@@ -41,9 +31,9 @@
     <nav>
       <ul id="menu"> 
 		<!--LISTE DES ONGLETS-->
-		<li id="espace_ban_g"><img src="../img/Addictab_logo3.png" alt="logo Addictab"/></li>
+		<li id="espace_ban_g"><img src="../img/Addictab_logo3.png" alt="logo Addictab" /></li>
          <li class="onglet"><a href="Accueil.php">Accueil</a></li>
-         <li class="onglet"><a href="Carte_interactive.php">Map</a></li>
+         <li class="onglet"><a href="test.php">Map</a></li>
          <li class="onglet"><a href="Forum.php">Forum</a></li>
          <li class="onglet"><a href="Page_Prevention.php">Prevention</a></li>       
          <li class="onglet"><a href="Ressources.php">Ressources</a></li>
@@ -55,11 +45,11 @@
 <article>
 <h2>EXPERIENCE</h2>
 </br>
-	<a class="bouton" href="sante.php"><span>SANTE</span></a>
-	<a class="bouton" href="general.php"><span>GENERAL</span></a>
-	<a class="bouton" href="experience.php"><span>EXPERIENCE</span></a>
-	
-
+	<p>RUBRIQUE :
+		<a class="bouton" href="experience.php"><span>EXPERIENCE</span></a>
+		<a class="bouton" href="sante.php"><span>SANTE</span></a>
+		<a class="bouton" href="general.php"><span>GENERAL</span></a>
+		</p>
 <table id="forum" border="30" cellpadding="15">
 <tr>
 		<th>Description</th>
