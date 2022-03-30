@@ -223,15 +223,14 @@ article table {
 font-family:sans-serif;
 }
  article th, td {
-    padding:.25em .5em;
-    text-align:left;
+        text-align:center;
     
   }
 article td {
-    background-color:rgba(117, 190, 218, 0.0);    
+    background-color:rgb(200,200,200);    
   }
 article th {
-    background-color:rgba(117, 190, 218, 0.0);
+    background-color:rgb(200,200,200);
     color:red;
   }
 }
@@ -655,23 +654,13 @@ article #brochure_partenaire{
 	background: #bbff00;
 	color: black;
 }
-#forum table {  
+#forum table {
 	margin: auto;
+	margin-bottom: 100px;	
 	font-family:sans-serif;
 }
 
-#forum th, td {
-	margin: auto;
-    text-align: center;
-  }
-#forum  td {
-	margin: auto;
-    background-color:black;    
-  }
-#forum  th {
-	margin: auto;
-    background-color:black;
-  }
+
 
 
 .signature{

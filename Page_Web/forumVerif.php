@@ -37,12 +37,21 @@
       </ul>
    </nav>
 </div>
+	
+
 <section>
-			<article>
+<article>
+<h2>FORUM</h2>
+</br>
+	<a class="bouton" href="sante.php"><span>SANTE</span></a>
+	<a class="bouton" href="general.php"><span>GENERAL</span></a>
+	<a class="bouton" href="experience.php"><span>EXPERIENCE</span></a>
+	
+	</table>
 				 <h2>Ajouter un topic:</h2>
 					<form action="insertSujet.php" method="post" autocomplete="off">
 					<p>
-					Intitulé :
+					Rubrique :
 					<input type="text" name="intitule" value=<?php echo "'".$_POST['intitule']."'"; ?> />
 					</p>
 					<p>
@@ -59,18 +68,13 @@
 						}
 		?>	
 					</form>
+</section>
+<section>	
 
-			</article>
-		</section>
-
-
-
-<section>
-<article>
 <table id="forum" border="30" cellpadding="15">
 <tr>
 		<th>Description</th>
-		<th>Intitule</th>
+		<th>Rubrique</th>
 		<th>IdPost</th>
 </tr>
 <?php
@@ -86,8 +90,9 @@ $re= $PDO -> query('select * from post');
 	$re ->closeCursor();
 
 ?>
-		</table>
-	</article>
+	
+</article>
+
 </section>
 
 		
@@ -103,7 +108,7 @@ $re= $PDO -> query('select * from post');
 			<br><br>
 
           
-		 </footer> <!--FIN PIED DE PAGE-->
+</footer> <!--FIN PIED DE PAGE-->
 		 
 	</body>
 	

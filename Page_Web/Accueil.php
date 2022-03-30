@@ -175,6 +175,5 @@
 
           
 		 </footer> <!--FIN PIED DE PAGE-->
-		 </div>
 	</body>
 </html>
