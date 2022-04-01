@@ -220,6 +220,7 @@ article{
 
 }
 article table {  
+margin : auto;
 font-family:sans-serif;
 }
  article th, td {
