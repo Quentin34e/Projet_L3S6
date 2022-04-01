@@ -13,6 +13,20 @@ session_start();
  
      <title>Addictab</title>
         <script type="text/javascript" src="../javascript/affichermasquer.js"> </script><!-- utile pour le diapo-->
+		<script>
+						function Afficher(){ 
+						var input1 = document.getElementById("password");
+						var input2 = document.getElementById("oeil");
+						if (input1.type === "password"){ 
+							input1.type = "text";
+							input2.src = "../img/OeilOuvert.png";
+						} 
+						else{ 
+							input1.type = "password";
+							input2.src = "../img/OeilFerme.png"; 
+						} 
+						} 
+		</script>
 	</head>
 	
 	<body>
@@ -52,6 +66,7 @@ session_start();
 					</p>
 					<p class="p_centre">
 						<label for="password" class="form-label">Mot de passe:</label><br />
+						<br><img src="../img/OeilFerme.png" id="oeil" width="60px" onclick="Afficher()"><br>
 						<input type="password" class="form-control" id="password" name="mdp1">
 					</p>
 					<p class="p_centre">

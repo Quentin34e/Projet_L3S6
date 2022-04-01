@@ -13,6 +13,20 @@ session_start();
  
      <title>Addictab</title>
         <script type="text/javascript" src="../javascript/affichermasquer.js"> </script><!-- utile pour le diapo-->
+	<script>
+						function Afficher(){ 
+						var input1 = document.getElementById("password");
+						var input2 = document.getElementById("oeil");
+						if (input1.type === "password"){ 
+							input1.type = "text";
+							input2.src = "../img/OeilOuvert.png";
+						} 
+						else{ 
+							input1.type = "password";
+							input2.src = "../img/OeilFerme.png"; 
+						} 
+						} 
+	</script>
 	</head>
 	
 	<body>
@@ -60,7 +74,6 @@ session_start();
 		<p> Mot de passe : <input type="password" name="mdp1" value= <? echo $_SESSION['utilisateur'][3]?> />
 		<img src= "../img/Crayon.jpg" alt="image crayon" position="relative" width="40px" margin=" 15px 15px 15px 15px"top="5px"/></p>
 		<p> <input type="submit" value="Envoyer"> </p>
-		<? echo $_SESSION['utilisateur'][4]; ?>
 	</form>
 	</article>
 </section>
