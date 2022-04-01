@@ -660,7 +660,6 @@ article #brochure_partenaire{
 }
 
 #forum table {
-  table-layout: fixed;
   margin : auto;
   width: 100%;
   border-collapse: collapse;
