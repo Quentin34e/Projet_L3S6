@@ -1,37 +1,35 @@
 <html>
 	<head>
-		<title>InsertRep</title>
+		<title>insertRep</title>
 		<?php
-			if($_POST['reponse']=='' || $_POST['dateCom']=='' || $_POST['heureCom']=='' ){
-				
-				header('Location: insertSujet.php');
-				
-			}	
-			else{
-				header('Location: Forum.php');
-				
+		
+			if(  $_POST['idRep']=='' || $_POST['champ']=='' || $_POST['rubriq']!='sante' & $_POST['rubriq']!='experience' & $_POST['rubriq']!='general'){
+				header('Location: RefusTopic.php');
 			}
-			function insertRep($reponse, $dateCom, $heureCom){
-				$sql="INSERT INTO `Post`(`reponse`, `dateCom`, `heureCom`) 
-				VALUES ('".$titre."','".$reponse."','".$dateCom."','".$heureCom."')";
+			else{
+				header('Location: AjoutTopic.php');
+			}
+			function insertRep($idRep, $champ, $rubriq ){
+				$sql="INSERT INTO `commentaire`(`idRep`,`rubriq`,`champ`) 
+				VALUES ('".$idRep."','".$champ."','".$rubriq."')";
 				echo $sql;
 				return $sql;
-				
 			}
-				if($_POST['reponse']=='' || $_POST['dateCom']=='' || $_POST['heureCom']=='' ){
-					
-				}
+				if($_POST['idRep']=='' || $_POST['rubriq']=='' || $_POST['champ']==''){
+				
+				}					
 				
 				else {
 					include('bd.php');
 					$bdd= getBD();
-					$rep = $bdd->query(insertRep($_POST['reponse'],$_POST['dateCom'],$_POST['heureCom'] ));
+					if(  $_POST['idRep']=='' || $_POST['champ']=='' || $_POST['rubriq']!='sante' & $_POST['rubriq']!='experience' & $_POST['rubriq']!='general'){
+					header('Location: RefusTopic.php');}
+					else{
+						$rep = $bdd->query(insertRep($_POST['idRep'],$_POST['champ'],$_POST['rubriq'],));
+						}
 	
 				}
 			
 		?>
 	</head>
-	<body>
-
-	</body>
 </html>

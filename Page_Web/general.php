@@ -40,36 +40,53 @@
       </ul>
    </nav>
 </div><!--FIN ENTETE SITE-->
-		<section>
-<article>
-<h2>GENERAL</h2>
-</br>
-	<p>RUBRIQUE :
+
+<section>
+	<article>
+		<h2>GENERAL</h2>
+			</br>
+				<p>RUBRIQUE :
 		<a class="bouton" href="experience.php"><span>EXPERIENCE</span></a>
 		<a class="bouton" href="sante.php"><span>SANTE</span></a>
 		<a class="bouton" href="general.php"><span>GENERAL</span></a>
-		</p>
-<table id="forum" border="30" cellpadding="15">
-<tr>
+				</p>
+		<table id="forum" border="30" cellpadding="15">
+		<tr>
+		<th>IdPost</th>
+		<th>Rubrique</th>
+		<th>Commentaire</th>
+		</tr>
+		<?php
+		require ('bd.php');
+		$PDO = getBD();
+		$re= $PDO -> query('select * from commentaire');
+		while ($mat = $re-> fetch()){
+			echo '<tr><td>'.$mat['idRep'].'</td>';
+			echo '<td>'.$mat['rubriq'].'</td>';
+			echo '<td>'.$mat['champ'].'</td></br>';
+		}
+		$re ->closeCursor();
+		?>
+		</table>
+		<table id="forum" border="30" cellpadding="15">
+		<tr>
 		<th>Description</th>
 		<th>Rubrique</th>
 		<th>IdPost</th>
-</tr>
-<?php
-require ('bd.php');
-$PDO = getBD();
-$re= $PDO -> query('select * from post where intitule="general" ORDER by idPost DESC LIMIT 8');
-
-	while ($mat = $re-> fetch()){
+		</tr>
+		<?php
+		require ('bd.php');
+		$PDO = getBD();
+		$re= $PDO -> query('select * from post where intitule="general" ORDER by idPost DESC LIMIT 2');
+		while ($mat = $re-> fetch()){
 		echo '<tr><td>'.$mat['description'].'</td>';
 		echo '<td>'.$mat['intitule'].'</td>';
 		echo '<td>'.$mat['idPost'].'</td></br>';
-}
-	$re ->closeCursor();
-
-?>
-</table>
-				  <h2>Ajouter un topic:</h2>
+		}
+		$re ->closeCursor();
+		?>
+		</table>
+				<h2>Ajouter un topic:</h2>
 					<form action="insertSujet.php" method="post" autocomplete="off">
 					<p>
 					Rubrique :
@@ -83,15 +100,52 @@ $re= $PDO -> query('select * from post where intitule="general" ORDER by idPost 
 					if(isset($_SESSION['utilisateur'])){
 						echo '<p>
 					<button class="bouton" type="submit" class="btn btn-primary"><span>Envoyer</span></button>
+					</p>';
+					}
+					else{
+						echo '<p class="p_centre"><a class="bouton" href="connexion.php"><span>connexion</span></a></p></li>';
+						}
+					?>	
+					</form>
+	</article>
+	<article>
+		
+	</article>
+</section>
+<section>
+	<article>
+		
+	
+		<table>
+				 <h2>Ajouter un commentaire:</h2>
+					<form action="insertRep.php" method="post" autocomplete="off">
+					<p>
+					IdPost :
+					<input type="text" name="idRep" value=<?php echo "'".$_POST['idRep']."'"; ?> />
+					<br/>indiquer : sante ou general ou experience</p>
+					<p>
+					<p>
+					Rubrique :
+					<input type="text" name="rubriq" value=<?php echo "'".$_POST['rubriq']."'"; ?> />
+					<br/>indiquer : sante ou general ou experience</p>
+					<p>
+					Description :
+					<input type="text" name="champ" value=<?php echo "'".$_POST['champ']."'"; ?> />
+					<br/>maximum : 300 caractères   </p>
+					<?  session_start();
+					if(isset($_SESSION['utilisateur'])){
+						echo '<p>
+					<button class="bouton" type="submit" class="btn btn-primary"><span>Envoyer</span></button>
 					</p>';}
 					else {
 						echo '<p class="p_centre"><a class="bouton" href="connexion.php"><span>connexion</span></a></p></li>';
 						}
-		?>	
+					?>	
 					</form>
-</article>
-
+		</table>
+	</article>	
 </section>
+
 
 		 <footer><!--PIED DE PAGE-->
             

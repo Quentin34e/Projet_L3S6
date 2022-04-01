@@ -655,23 +655,37 @@ article #brochure_partenaire{
 	color: black;
 }
 #forum table {
-	margin: auto;
 	margin-bottom: 100px;	
 	font-family:sans-serif;
 }
 
+#forum table {
+  table-layout: fixed;
+  margin : auto;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+#forum th:nth-child(1) {
+  width: 30%;
+}
+
+#forum th:nth-child(2) {
+  width: 20%;
+}
+
+#forum th:nth-child(3) {
+  width: 15%;
+}
+
+#forum th:nth-child(4) {
+  width: 35%;
+}
+
 #forum th, td {
-
-    text-align: center;
-  }
-#forum  td {
-	margin: auto;
-    background-color:black;    
-  }
-#forum  th {
-
-    background-color:black;
-  }
+  padding: 20px;
+}
 
 
 .signature{
