@@ -52,24 +52,6 @@
 				</p>
 		<table id="forum" border="30" cellpadding="15">
 		<tr>
-		<th>IdPost</th>
-		<th>Rubrique</th>
-		<th>Commentaire</th>
-		</tr>
-		<?php
-		require ('bd.php');
-		$PDO = getBD();
-		$re= $PDO -> query('select * from commentaire');
-		while ($mat = $re-> fetch()){
-			echo '<tr><td>'.$mat['idRep'].'</td>';
-			echo '<td>'.$mat['rubriq'].'</td>';
-			echo '<td>'.$mat['champ'].'</td></br>';
-		}
-		$re ->closeCursor();
-		?>
-		</table>
-		<table id="forum" border="30" cellpadding="15">
-		<tr>
 		<th>Description</th>
 		<th>Rubrique</th>
 		<th>IdPost</th>
@@ -108,9 +90,9 @@
 					?>	
 					</form>
 	</article>
-	<article>
-		
-	</article>
+</section>
+<section>
+	
 </section>
 <section>
 	<article>
@@ -145,20 +127,34 @@
 		</table>
 	</article>	
 </section>
+	<section>
 
 
 		 <footer><!--PIED DE PAGE-->
             
 
-			<h2 align="center">Contact</h2>
-				<p align="center"><a href="tel:06XXXXXXXX"><img src="../img/Logo_Telephone.jpg" alt="image téléphone" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px" /></a>
-				<a href="mailto:addictab123@gmail.com"><img src="../img/email.png" alt="image enveloppe" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px"/></a>
-				<a href="https://www.facebook.com/profile.php?id=100078106309466"><img src="../img/Logo_facebook.png" alt="logo facebook" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px"/></a>
-			<p id="mention"><small>Quentin / Clement / Maxime / Yohann<br />Copyright ADDICTAB - Tous droits réservés.</small></p>
-			<br><br>
-
-          
+			<article>
+	<table id="com" border="30" cellpadding="15">
+		<tr>
+		<th>IdPost</th>
+		<th>Rubrique</th>
+		<th>Commentaire</th>
+		</tr>
+		<?php
+		require ('bd.php');
+		$PDO = getBD();
+		$re= $PDO -> query('select * from commentaire LIMIT 2');
+		while ($mat = $re-> fetch()){
+			echo '<tr><td>'.$mat['idRep'].'</td>';
+			echo '<td>'.$mat['rubriq'].'</td>';
+			echo '<td>'.$mat['champ'].'</td></br>';
+		}
+		$re ->closeCursor();
+		?>
+		</table>
+		
+	</article>
 		 </footer> <!--FIN PIED DE PAGE-->
-		 </div>
+	<section/>
 	</body>
 </html>

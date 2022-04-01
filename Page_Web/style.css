@@ -208,14 +208,11 @@ a:hover{
 }
 article{
 	font-size: 25px;
-	position: relative;
 	border-top: solid black 5px;
 	border-bottom: solid black 5px;
 	background-color: rgb(191,52,85);
 	background: linear-gradient(0deg, rgba(191,52,85) 0%, rgba(191,52,85) 90%, rgba(141,2,45) 100%);
 	color: white;
-	margin: 0px 0px 20px 0px;
-	padding: 0px 0px 0px 0px;
 	text-align: justify;
 
 }
@@ -639,8 +636,10 @@ article #brochure_partenaire{
 
 }
 #com table {
+	display: block;
 	margin: auto;
 	border: solid red;
+
 }
 #com th{
 		text-align:center;
