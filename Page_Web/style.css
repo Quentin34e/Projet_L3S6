@@ -638,6 +638,21 @@ article #brochure_partenaire{
 	padding: 0 0 0 0;
 
 }
+#com table {
+	margin: auto;
+	border: solid red;
+}
+#com th{
+		text-align:center;
+		background-color:rgb(200,200,200);
+		color:white;
+}
+#com td{
+	font-size: 0.7em;
+	background-color: #bbff00;
+	border: solid rgb(150,200,255) 1px;
+	text-align: center;
+}
 #tableau_classement table{
 	margin: auto;
 	margin-bottom: 10px;
