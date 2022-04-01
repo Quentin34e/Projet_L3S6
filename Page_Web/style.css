@@ -223,17 +223,16 @@ article table {
 margin : auto;
 font-family:sans-serif;
 }
- article th, td {
-        text-align:center;
-    
-  }
-article td {
-    background-color:rgb(200,200,200);    
-  }
 article th {
-    background-color:rgb(200,200,200);
-    color:red;
-  }
+        text-align:center;
+		background-color:rgb(200,200,200);
+		color:red;
+ }
+ article td { text-align:center;
+		background-color:rgb(200,200,200);
+		color:white;
+ }
+	 
 }
 article p{
 	margin: 10px 10px 0 10px;
