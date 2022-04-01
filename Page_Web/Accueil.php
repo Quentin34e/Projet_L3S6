@@ -10,29 +10,21 @@
  
      <title>Addictab</title>
 	<script language="javascript">
+		var q1=0;
+		var q2=0;
+		var q3=0;
+		var q4=0;
+		var q5=0;
+		var q6=0;
+		var q7=0;
+		var q8=0;
+		var q9=0;
+		var q10=0;
       function score(){ 
-		var s=0;
-        if(document.qcm1.choix1.checked){
-			s=s+1}      
-        if (document.qcm1.choix4.checked){
-			s=s+1;}		
-		if (document.qcm1.choix5.checked){
-			s=s+1;}		
-		if (document.qcm1.choix7.checked){
-			s=s+1;}			
-		if (document.qcm1.choix10.checked){
-			s=s+1;}
-		if (document.qcm1.choix12.checked){
-			s=s+1;}
-		if (document.qcm1.choix14.checked){
-			s=s+1;}
-		if (document.qcm1.choix15.checked){
-			s=s+1;}
-		if (document.qcm1.choix17.checked){
-			s=s+1;}
-		if (document.qcm1.choix19.checked){
-			s=s+1;}
-      alert('Votre score est de  '+s+'/10');}
+		score=q1+q2+q3+q4+q5+q6+q7+q8+q9+q10
+		
+        
+      alert('Votre score est de  '+score+'/10');}
       
         
    </script>
@@ -115,47 +107,47 @@
 				<BR>
 				1. Le seul risque encouru avec le tabac est le cancer du poumon<BR>
 				<B>Réponses :</B>
-				<BR><INPUT TYPE=CHECKBOX NAME="choix1" VALUE=0> Vrai</INPUT>
-				<BR><INPUT TYPE=CHECKBOX NAME="choix2" VALUE=1> Faux</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix1" onclick='q1=0'> Vrai</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix1" onclick='q1=1'> Faux</INPUT>
 				<BR><BR>
 				2. La dépendance physique n’existe que si on fume plus de 5
 				cigarettes par jour. 
-				<BR><INPUT TYPE=CHECKBOX NAME="choix3" VALUE=0> Vrai</INPUT>
-				<BR><INPUT TYPE=CHECKBOX NAME="choix4" VALUE=1> Faux</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix2" onclick='q2=0'> Vrai</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix2" onclick='q2=1'> Faux</INPUT>
 				<BR><BR>
 				3. Les femmes qui fument pendant leur grossesse accouchent de
 				bébés plus chétifs que la moyenne. 
-				<BR><INPUT TYPE=CHECKBOX NAME="choix5" VALUE=1> Vrai</INPUT>
-				<BR><INPUT TYPE=CHECKBOX NAME="choix6" VALUE=0> Faux</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix3" onclick='q3=1'> Vrai</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix3" onclick='q3=0'> Faux</INPUT>
 				<BR><BR>
 				4. Fumer la chicha (le narguilé) est moins nocif que fumer la
 				cigarette. 
-				<BR><INPUT TYPE=CHECKBOX NAME="choix7" VALUE=1> Vrai</INPUT>
-				<BR><INPUT TYPE=CHECKBOX NAME="choix8" VALUE=0> Faux</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix4" onclick='q4=0'> Vrai</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix4" onclick='q4=1'> Faux</INPUT>
 				<BR><BR>
 				5. Il existe un seuil en dessous duquel fumer n’entraine aucun risque
-				<BR><INPUT TYPE=CHECKBOX NAME="choix9" VALUE=0> Vrai</INPUT>
-				<BR><INPUT TYPE=CHECKBOX NAME="choix10" VALUE=1> Faux</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix5" onclick='q5=0'> Vrai</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix5" onclick='q5=1'> Faux</INPUT>
 				<BR><BR>
 				6. La cigarette électronique est inoffensive.
-				<BR><INPUT TYPE=CHECKBOX NAME="choix11" VALUE=1> Vrai</INPUT>
-				<BR><INPUT TYPE=CHECKBOX NAME="choix12" VALUE=0> Faux</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix6" onclick='q6=0'> Vrai</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix6" onclick='q6=1'> Faux</INPUT>
 				<BR><BR>
 				7. Chaque année la journée mondiale sans tabac a lieu le 31 mars
-				<BR><INPUT TYPE=CHECKBOX NAME="choix13" VALUE=0> Vrai</INPUT>
-				<BR><INPUT TYPE=CHECKBOX NAME="choix14" VALUE=1> Faux</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix7" onclick='q7=0'> Vrai</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix7" onclick='q7=1'> Faux</INPUT>
 				<BR><BR>
 				8. Le tabac contient plus de 40 substances cancérigènes.
-				<BR><INPUT TYPE=CHECKBOX NAME="choix15" VALUE=1> Vrai</INPUT>
-				<BR><INPUT TYPE=CHECKBOX NAME="choix16" VALUE=0> Faux</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix8" onclick='q8=1'> Vrai</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix8" onclick='q8=0'> Faux</INPUT>
 				<BR><BR>
 				9. Quand on arrête de fumer, les bénéfices apparaissent dès la 1ère heure.
-				<BR><INPUT TYPE=CHECKBOX NAME="choix17" VALUE=1> Vrai</INPUT>
-				<BR><INPUT TYPE=CHECKBOX NAME="choix18" VALUE=0> Faux</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix9" onclick='q9=1'> Vrai</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix9" onclick='q9=0'> Faux</INPUT>
 				<BR><BR>
 				10. Le tabac tue beaucoup plus que la voiture dans les pays évolués.
-				<BR><INPUT TYPE=CHECKBOX NAME="choix19" VALUE=1> Vrai</INPUT>
-				<BR><INPUT TYPE=CHECKBOX NAME="choix20" VALUE=0> Faux</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix10" onclick='q10=1'> Vrai</INPUT>
+				<BR><INPUT TYPE=radio NAME="choix10" onclick='q10=0'> Faux</INPUT>
 				<BR><BR>
 				<INPUT TYPE="button" NAME="bouton" VALUE=" Voir mon score" ONCLICK="score();">
 				<INPUT TYPE="button" NAME="bouton" VALUE=" Voir les réponses" ONCLICK="window.location.href='QuizzReponses.php'">

@@ -44,7 +44,7 @@
 		<p><strong>Question 3.</strong> Les femmes qui fument pendant leur grossesse accouchent de bébés plus chétifs que la moyenne. </p>
 		<p><strong>Réponse : Vrai</strong></p><br>
 		<p><strong>Question 4.</strong> Fumer la chicha (le narguilé) est moins nocif que fumer la cigarette. </p>
-		<p><strong>Réponse : Vrai</strong></p><br>
+		<p><strong>Réponse : Faux</strong></p><br>
 		<p><strong>Question 5.</strong> Il existe un seuil en dessous duquel fumer n’entraine aucun risque. </p>
 		<p><strong>Réponse : Faux</strong></p><br>
 		<p><strong>Question 6.</strong> La cigarette électronique est inoffensive. </p>
