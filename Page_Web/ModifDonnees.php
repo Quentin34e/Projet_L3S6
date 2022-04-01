@@ -1,40 +1,35 @@
 <!DOCTYPE html>
-
 <html>
 	<head>
-	<title>Se connecter</title>
-	<link rel="stylesheet" href="index.css" type="text/css" media="screen" />
-	<?php
-	require ('bd.php');
-    $bdd = getBD();
-	/*$mail=$_POST['mail'];
-	$mdp=$_POST['mdp1'];*/
-    $sql ="UPDATE utilisateur SET nom= WHERE id_utilisateur=?";
-	$sql ="UPDATE utilisateur SET prenom= WHERE id_utilisateur=?";
-	$sql ="UPDATE utilisateur SET mail= WHERE id_utilisateur=?";
-	$sql ="UPDATE utilisateur SET mdp= WHERE id_utilisateur=?";
-    $statement = $bdd->prepare($sql);
-    /*$statement->execute([$mail,$mdp]);*/
-
 	
-	$table = $statement->fetch();
+	<title>Se connecter</title>
+	<link rel="stylesheet" href="style.css" />
+	<?php
+	session_start();
+	require('bd.php');
+          
 
-    if($mail!='' && $mdp!=''){
-			session_start();
-			$_SESSION['utilisateur'] = array($table['nom'],
-                                    $table['prenom'],
-                                    $mail,
-                                    $mdp);
-        header('Location: Accueil.php');
-		
-    }
-	else{
-        header('Location: connexion.php');
-        exit();
-	}
 	?>
 	</head>
 	
 	<body>
+	<?
+	function modifier( $n, $p, $mail, $mdp1,$id_utilisateur){
+		$bdd= getBD();
+		$sql_update = "UPDATE utilisateur SET nom=? , prenom=? , mail=? , mdp=? WHERE id_utilisateur=?";
+		$stmt_update = $bdd->prepare($sql_update);
+		$stmt_update->execute([$n,$p,$mail,$mdp1,$id_utilisateur]) or die(print_r($stmt_update->errorInfo(), true));
+	}
+	
+	
+ if($_POST['nom']=='' || $_POST['prenom']=='' || $_POST['mail']=='' || $_POST['mdp1']==''){
+        header('Location: MonProfil.php');
+    }
+	else{
+		$id_utilisateur=$_SESSION['utilisateur'][4];
+		modifier($_POST['nom'],$_POST['prenom'],$_POST['mail'],$_POST['mdp1'],$id_utilisateur );
+        header('Location: connexion.php');
+	}
+?>
 	</body>
 </html>

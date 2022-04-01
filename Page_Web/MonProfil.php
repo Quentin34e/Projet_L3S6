@@ -44,34 +44,23 @@ session_start();
 </div><!--FIN ENTETE SITE-->
 <section>
 	<article>
-	<form action="ModifDonnees.php" method="post">    
-					<p class="p_centre">
-					/!\ Pour modifier vos informations;<br> remplacez le champ pré-rempli que vous souhaitez modifier. <br> Une fois terminée, cliquez su le bouton "Valider" pour les modifier /!\
-					</p>
-					<p class="p_centre">
-						<label for="password" class="form-label">Nom :</label><br />
-						<input type="password" class="form-control" id="password" name="mdp1" placeholder=<? echo $_SESSION['utilisateur'][0]?>>
-						<img src= "../img/Crayon.jpg" alt="image crayon" position="relative" width="40px" margin=" 15px 15px 15px 15px"top="5px"/>
-					</p>
-					<p class="p_centre">
-						<label for="password" class="form-label">Prénom :</label><br />
-						<input type="password" class="form-control" id="password" name="mdp1" placeholder=<? echo $_SESSION['utilisateur'][1]?>>
-						<img src= "../img/Crayon.jpg" alt="image crayon" position="relative" width="40px" margin=" 15px 15px 15px 15px"top="5px"/>
-					</p>
-					<p class="p_centre">
-						<label for="email" class="form-label">Adresse mail :</label><br />
-						<input type="email" class="form-control" id="email" name="mail" aria-describedby="email-help" placeholder=<? echo $_SESSION['utilisateur'][2]?> >
-						<img src= "../img/Crayon.jpg" alt="image crayon" position="relative" width="40px" margin=" 15px 15px 15px 15px"top="5px"/>
-					</p>
-			
-					<p class="p_centre">
-						<label for="password" class="form-label">Mot de passe:</label><br />
-						<input type="password" class="form-control" id="password" name="mdp1" placeholder=<? echo $_SESSION['utilisateur'][3]?>>
-						<img src= "../img/Crayon.jpg" alt="image crayon" position="relative" width="40px" margin=" 15px 15px 15px 15px"top="5px"/>
-					</p>
-					<p class="p_centre">
-						<button class="bouton" type="submit" class="btn btn-primary"><span>Valider</span></button>
-					</p>
+	<form action="ModifDonnees.php" method="post">
+		<p class="p_centre">
+		/!\ Pour modifier vos informations;<br> remplacez le champ pré-rempli que vous souhaitez modifier. <br> Une fois terminée, cliquez sur le bouton "Valider" pour les modifier /!\
+		</p>
+		<p class="p_centre">
+		Faites attention de ne laisser aucun champs vide sinon cela vous redirigera de nouveau sur cette page et vous devrez recommencer
+		</p>
+		<p> Nom : <input type="text" name="nom"  value= <? echo $_SESSION['utilisateur'][0]?> />
+		<img src= "../img/Crayon.jpg" alt="image crayon" position="relative" width="40px" margin=" 15px 15px 15px 15px"top="5px"/></p>
+		<p> Prenom : <input type="text" name="prenom"  value= <? echo $_SESSION['utilisateur'][1]?> />
+		<img src= "../img/Crayon.jpg" alt="image crayon" position="relative" width="40px" margin=" 15px 15px 15px 15px"top="5px"/></p>
+		<p> Adresse e-mail : <input type="text" name="mail"  value= <? echo $_SESSION['utilisateur'][2]?> />
+		<img src= "../img/Crayon.jpg" alt="image crayon" position="relative" width="40px" margin=" 15px 15px 15px 15px"top="5px"/></p>
+		<p> Mot de passe : <input type="password" name="mdp1" value= <? echo $_SESSION['utilisateur'][3]?> />
+		<img src= "../img/Crayon.jpg" alt="image crayon" position="relative" width="40px" margin=" 15px 15px 15px 15px"top="5px"/></p>
+		<p> <input type="submit" value="Envoyer"> </p>
+		<? echo $_SESSION['utilisateur'][4]; ?>
 	</form>
 	</article>
 </section>
