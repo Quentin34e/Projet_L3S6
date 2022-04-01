@@ -654,16 +654,12 @@ article #brochure_partenaire{
 	background: #bbff00;
 	color: black;
 }
-#forum table {
-	margin-bottom: 100px;	
-	font-family:sans-serif;
-}
+
 
 #forum table {
   margin : auto;
   width: 100%;
-  border-collapse: collapse;
-  border: 3px solid purple;
+  font-family:sans-serif;
 }
 
 #forum th:nth-child(1) {
