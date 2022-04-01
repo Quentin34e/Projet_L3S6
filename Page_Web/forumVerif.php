@@ -15,7 +15,7 @@
 <div id="bloc_page">
 <header>
 <div id="entete"> 
-<h1>FORUM</h1><!--Nom au dessus de l'onglet-->
+<h1>TOPICS</h1><!--Nom au dessus de l'onglet-->
       <?  session_start();
 			if(isset($_SESSION['utilisateur'])){
 				echo '<a id="connexion" class="bouton" href="déconnexion.php">  <span>Se déconnecter</span></a>';
@@ -42,11 +42,15 @@
 <section>
 	<article>
 		<h2>FORUM</h2>	
+		</br>
 		<p>RUBRIQUE :
 		<a class="bouton" href="experience.php"><span>EXPERIENCE</span></a>
 		<a class="bouton" href="sante.php"><span>SANTE</span></a>
 		<a class="bouton" href="general.php"><span>GENERAL</span></a>
 		</p>
+		<p>ACCEDEZ A L'ESPACE :
+					<a class="bouton" href="commentaire.php"><span>COMMENTAIRE</span></a>
+					</p>
 		</br>
 		</br>
 		</br>
@@ -71,7 +75,7 @@
 						}
 		?>	
 					</form>
-	</table>	
+	</table>
 	<table id="forum" border="30" cellpadding="15">
 		<tr>
 		<th>Description</th>
@@ -89,6 +93,31 @@ while ($mat = $re-> fetch()){
 	}
 	$re ->closeCursor();
 ?>
+	</table>
+</article>	
+<article>
+</br>
+	<table>
+				 <h2>Ajouter un commentaire:</h2>
+					<form action="insertRep.php" method="post" autocomplete="off">
+					<p>
+					IdPost :
+					<input type="text" name="idRep" value=<?php echo "'".$_POST['idRep']."'"; ?> />
+					<br/>indiquer : l'idPost du topic </p>
+					<p>
+					<p>
+					Rubrique :
+					<input type="text" name="rubriq" value=<?php echo "'".$_POST['rubriq']."'"; ?> />
+					<br/>indiquer : sante ou general ou experience</p>
+					<p>
+					Description :
+					<input type="text" name="champ" value=<?php echo "'".$_POST['champ']."'"; ?> />
+					<br/>maximum : 300 caractères   </p>
+					<p><button class="bouton" type="submit" class="btn btn-primary"><span>Envoyer</span></button></p>
+					<p>ACCEDEZ A L'ESPACE :
+					<a class="bouton" href="commentaire.php"><span>COMMENTAIRE</span></a>
+					</p>
+					</form>
 		</table>
 	</article>
 </section>

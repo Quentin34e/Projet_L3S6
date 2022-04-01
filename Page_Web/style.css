@@ -676,23 +676,23 @@ article #brochure_partenaire{
   font-family:sans-serif;
 }
 
-#forum th:nth-child(1) {
+article #forum th:nth-child(1) {
   width: 30%;
 }
 
-#forum th:nth-child(2) {
+article #forum th:nth-child(2) {
   width: 20%;
 }
 
-#forum th:nth-child(3) {
+article #forum th:nth-child(3) {
   width: 15%;
 }
 
-#forum th:nth-child(4) {
+article #forum th:nth-child(4) {
   width: 35%;
 }
 
-#forum th, td {
+article #forum th, td {
   padding: 20px;
 }
 

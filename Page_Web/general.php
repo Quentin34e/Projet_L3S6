@@ -18,7 +18,7 @@
 <div id="bloc_page">
 <header>
 <div id="entete"> 
-<h1>FORUM</h1><!--Nom au dessus de l'onglet-->
+<h1>TOPIC</h1><!--Nom au dessus de l'onglet-->
       <?  session_start();
 			if(isset($_SESSION['utilisateur'])){
 				echo '<a id="connexion" class="bouton" href="déconnexion.php">  <span>Se déconnecter</span></a>';
@@ -44,12 +44,15 @@
 <section>
 	<article>
 		<h2>GENERAL</h2>
-			</br>
-				<p>RUBRIQUE :
+		</br>
+		<p>RUBRIQUE :
 		<a class="bouton" href="experience.php"><span>EXPERIENCE</span></a>
 		<a class="bouton" href="sante.php"><span>SANTE</span></a>
 		<a class="bouton" href="general.php"><span>GENERAL</span></a>
-				</p>
+		</p>
+		<p>ACCEDEZ A L'ESPACE :
+					<a class="bouton" href="commentaire.php"><span>COMMENTAIRE</span></a>
+					</p>
 		<table id="forum" border="30" cellpadding="15">
 		<tr>
 		<th>Description</th>
@@ -59,7 +62,7 @@
 		<?php
 		require ('bd.php');
 		$PDO = getBD();
-		$re= $PDO -> query('select * from post where intitule="general" ORDER by idPost DESC LIMIT 2');
+		$re= $PDO -> query('select * from post where intitule="general" ORDER by idPost DESC LIMIT 6');
 		while ($mat = $re-> fetch()){
 		echo '<tr><td>'.$mat['description'].'</td>';
 		echo '<td>'.$mat['intitule'].'</td>';
@@ -92,19 +95,16 @@
 	</article>
 </section>
 <section>
-	
-</section>
-<section>
 	<article>
-		
-	
+		</br>
 		<table>
+				 <table>
 				 <h2>Ajouter un commentaire:</h2>
 					<form action="insertRep.php" method="post" autocomplete="off">
 					<p>
 					IdPost :
 					<input type="text" name="idRep" value=<?php echo "'".$_POST['idRep']."'"; ?> />
-					<br/>indiquer : sante ou general ou experience</p>
+					<br/>indiquer : l'idPost du topic </p>
 					<p>
 					<p>
 					Rubrique :
@@ -114,47 +114,25 @@
 					Description :
 					<input type="text" name="champ" value=<?php echo "'".$_POST['champ']."'"; ?> />
 					<br/>maximum : 300 caractères   </p>
-					<?  session_start();
-					if(isset($_SESSION['utilisateur'])){
-						echo '<p>
-					<button class="bouton" type="submit" class="btn btn-primary"><span>Envoyer</span></button>
-					</p>';}
-					else {
-						echo '<p class="p_centre"><a class="bouton" href="connexion.php"><span>connexion</span></a></p></li>';
-						}
-					?>	
+					<p><button class="bouton" type="submit" class="btn btn-primary"><span>Envoyer</span></button></p>
+					<p>ACCEDEZ A L'ESPACE :
+					<a class="bouton" href="commentaire.php"><span>COMMENTAIRE</span></a>
+					</p>
 					</form>
 		</table>
-	</article>	
+	</article>
 </section>
 	<section>
-
-
-		 <footer><!--PIED DE PAGE-->
+		<footer><!--PIED DE PAGE-->
+			<h2 align="center">Contact</h2>
+				<p align="center"><a href="tel:06XXXXXXXX"><img src="../img/Logo_Telephone.jpg" alt="image téléphone" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px" /></a>
+				<a href="mailto:addictab123@gmail.com"><img src="../img/email.png" alt="image enveloppe" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px"/></a>
+				<a href="https://www.facebook.com/profile.php?id=100078106309466"><img src="../img/Logo_facebook.png" alt="logo facebook" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px"/></a>
+			<p id="mention"><small>Quentin / Clement / Maxime / Yohann<br />Copyright ADDICTAB - Tous droits réservés.</small></p>
+			<br><br>
             
 
-			<article>
-	<table id="com" border="30" cellpadding="15">
-		<tr>
-		<th>IdPost</th>
-		<th>Rubrique</th>
-		<th>Commentaire</th>
-		</tr>
-		<?php
-		require ('bd.php');
-		$PDO = getBD();
-		$re= $PDO -> query('select * from commentaire LIMIT 2');
-		while ($mat = $re-> fetch()){
-			echo '<tr><td>'.$mat['idRep'].'</td>';
-			echo '<td>'.$mat['rubriq'].'</td>';
-			echo '<td>'.$mat['champ'].'</td></br>';
-		}
-		$re ->closeCursor();
-		?>
-		</table>
-		
-	</article>
-		 </footer> <!--FIN PIED DE PAGE-->
+		</footer> <!--FIN PIED DE PAGE-->
 	<section/>
 	</body>
 </html>
