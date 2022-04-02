@@ -42,23 +42,11 @@
 				<div style="max-width: 1000px"> <!-- Keep map above fold -->
 					<div id="map"></div><br>
 				</div>
-				<div>Please read the <a href="http://simplemaps.com/docs">documentation</a> to learn how to customize this map.</div>
+
 				</div>
 			</section>
 		</article>
-		<article>
-			<section>
-				<h2>Liste des pays</h2>
-				<ul> 
-				<!--LISTE DES Pays que l'on a dans nos données-->
-					<li><a>France</a></li>
-					<li><a>Japon</a></li>
-					<li><a>Norvège</a></li>
-					<li><a>etc</a></li>       
-					<li><a>...</a></li>
-				</ul>
-			</section>
-		</article>
+
 	</body>
 	<footer><!--PIED DE PAGE-->
             
