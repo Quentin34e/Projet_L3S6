@@ -105,47 +105,46 @@
 				<B>Le QCM de 10 questions ci dessous à pour but de tester vos connaissances
 				 sur le tabac.</B><BR>
 				<BR>
-				1. Le seul risque encouru avec le tabac est le cancer du poumon<BR>
-				<B>Réponses :</B>
+				<u>1. Le seul risque encouru avec le tabac est le cancer du poumon.</u><BR>
 				<BR><INPUT TYPE=radio NAME="choix1" onclick='q1=0'> Vrai</INPUT>
 				<BR><INPUT TYPE=radio NAME="choix1" onclick='q1=1'> Faux</INPUT>
 				<BR><BR>
-				2. La dépendance physique n’existe que si on fume plus de 5
-				cigarettes par jour. 
+				<u>2. La dépendance physique n’existe que si on fume plus de 5
+				cigarettes par jour. </u><BR>
 				<BR><INPUT TYPE=radio NAME="choix2" onclick='q2=0'> Vrai</INPUT>
 				<BR><INPUT TYPE=radio NAME="choix2" onclick='q2=1'> Faux</INPUT>
 				<BR><BR>
-				3. Les femmes qui fument pendant leur grossesse accouchent de
-				bébés plus chétifs que la moyenne. 
+				<u>3. Les femmes qui fument pendant leur grossesse accouchent de
+				bébés plus chétifs que la moyenne. </u><BR>
 				<BR><INPUT TYPE=radio NAME="choix3" onclick='q3=1'> Vrai</INPUT>
 				<BR><INPUT TYPE=radio NAME="choix3" onclick='q3=0'> Faux</INPUT>
 				<BR><BR>
-				4. Fumer la chicha (le narguilé) est moins nocif que fumer la
-				cigarette. 
+				<u>4. Fumer la chicha (le narguilé) est moins nocif que fumer la
+				cigarette. </u><BR>
 				<BR><INPUT TYPE=radio NAME="choix4" onclick='q4=0'> Vrai</INPUT>
 				<BR><INPUT TYPE=radio NAME="choix4" onclick='q4=1'> Faux</INPUT>
 				<BR><BR>
-				5. Il existe un seuil en dessous duquel fumer n’entraine aucun risque
+				<u>5. Il existe un seuil en dessous duquel fumer n’entraine aucun risque.</u><BR>
 				<BR><INPUT TYPE=radio NAME="choix5" onclick='q5=0'> Vrai</INPUT>
 				<BR><INPUT TYPE=radio NAME="choix5" onclick='q5=1'> Faux</INPUT>
 				<BR><BR>
-				6. La cigarette électronique est inoffensive.
+				<u>6. La cigarette électronique est inoffensive.</u><BR>
 				<BR><INPUT TYPE=radio NAME="choix6" onclick='q6=0'> Vrai</INPUT>
 				<BR><INPUT TYPE=radio NAME="choix6" onclick='q6=1'> Faux</INPUT>
 				<BR><BR>
-				7. Chaque année la journée mondiale sans tabac a lieu le 31 mars
+				<u>7. Chaque année la journée mondiale sans tabac a lieu le 31 mars.</u><BR>
 				<BR><INPUT TYPE=radio NAME="choix7" onclick='q7=0'> Vrai</INPUT>
 				<BR><INPUT TYPE=radio NAME="choix7" onclick='q7=1'> Faux</INPUT>
 				<BR><BR>
-				8. Le tabac contient plus de 40 substances cancérigènes.
+				<u>8. Le tabac contient plus de 40 substances cancérigènes.</u><BR>
 				<BR><INPUT TYPE=radio NAME="choix8" onclick='q8=1'> Vrai</INPUT>
 				<BR><INPUT TYPE=radio NAME="choix8" onclick='q8=0'> Faux</INPUT>
 				<BR><BR>
-				9. Quand on arrête de fumer, les bénéfices apparaissent dès la 1ère heure.
+				<u>9. Quand on arrête de fumer, les bénéfices apparaissent dès la 1ère heure.</u><BR>
 				<BR><INPUT TYPE=radio NAME="choix9" onclick='q9=1'> Vrai</INPUT>
 				<BR><INPUT TYPE=radio NAME="choix9" onclick='q9=0'> Faux</INPUT>
 				<BR><BR>
-				10. Le tabac tue beaucoup plus que la voiture dans les pays évolués.
+				<u>10. Le tabac tue beaucoup plus que la voiture dans les pays évolués.</u><BR>
 				<BR><INPUT TYPE=radio NAME="choix10" onclick='q10=1'> Vrai</INPUT>
 				<BR><INPUT TYPE=radio NAME="choix10" onclick='q10=0'> Faux</INPUT>
 				<BR><BR>
