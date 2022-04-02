@@ -100,7 +100,6 @@
 			<article>
 				<H2> Vrai / Faux</H2>
 				<HR>
-
 				<FORM NAME="qcm1">
 				<B>Le QCM de 10 questions ci dessous à pour but de tester vos connaissances
 				 sur le tabac.</B><BR>
@@ -152,6 +151,7 @@
 				<INPUT TYPE="button" NAME="bouton" VALUE=" Voir les réponses" ONCLICK="window.location.href='QuizzReponses.php'">
 				</INPUT>
 				</FORM>
+				
 			</article>
 		</section>
 		 <footer><!--PIED DE PAGE-->
