@@ -10,26 +10,13 @@ var simplemaps_worldmap_mapdata={
 		state_description: "State description", //(petit texte qui s'affiche dans le popup) 
     state_color: "#25CEE2",
     state_hover_color: "#C70039",
-    state_url: "https://www.facebook.com/profile.php?id=100078106309466", //(renvoi vers ce lien quand on clique sur un pays, changer ça par un lien qui renvoie vers une courbe, graphique, etc..., mais la j'ai juste mis le lien vers le fb addictab)
+    state_url: "TraceurGraphe.php", //(renvoi vers ce lien quand on clique sur un pays, changer ça par un lien qui renvoie vers une courbe, graphique, etc..., mais la j'ai juste mis le lien vers le fb addictab)
     border_size: 1.5,
     border_color: "#1E1E1E",
     all_states_inactive: "no", //(c'est la de base, ça peut servir mais en vrai on s'en fout, pareil pour tout les autres, hidden, zoomable, etc...)
     all_states_zoomable: "no",
     
-		//Location defaults
-		location_description: "Location description", //(petit texte qui s'affiche dans le popup du point rose)
-    location_color: "#FF0067",
-    location_opacity: 0.9,
-    location_hover_opacity: 1,
-    location_url: "https://www.facebook.com/profile.php?id=100078106309466", //(pareil que pour le pays maispour  le point rose)
-    location_size: 20,
-    location_type: "circle",
-    location_border_color: "#FFFFFF",
-    location_border: 2,
-    location_hover_border: 2.5,
-    all_locations_inactive: "no",
-    all_locations_hidden: "no",
-	location_pulse: "yes", //(ça fait une pulsasion quand on passe la souris dessus et c'est assez stylé voilà)
+		
     
 		//Label defaults (je sais pas trop ce que ça fait mais ça à l'air important)
 		label_color: "#ffffff",
