@@ -100,7 +100,6 @@
 			<article>
 				<H2> Vrai / Faux</H2>
 				<HR>
-
 				<FORM NAME="qcm1">
 				<B>Le QCM de 10 questions ci dessous à pour but de tester vos connaissances
 				 sur le tabac.</B><BR>
@@ -152,6 +151,7 @@
 				<INPUT TYPE="button" NAME="bouton" VALUE=" Voir les réponses" ONCLICK="window.location.href='QuizzReponses.php'">
 				</INPUT>
 				</FORM>
+				
 			</article>
 		</section>
 		 <footer><!--PIED DE PAGE-->
@@ -159,7 +159,7 @@
 
 			<h2 align="center">Contact</h2>
 				<p align="center"><a href="tel:06XXXXXXXX"><img src="../img/Logo_Telephone.jpg" alt="image téléphone" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px" /></a>
-				<a href="mailto:addictab123@gmail.com"><img src="../img/email.png" alt="image enveloppe" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px"/></a>
+				<a href="mailto:addictab123@gmail.com"><img src="../img/email.jpg" alt="image enveloppe" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px"/></a>
 				<a href="https://www.facebook.com/profile.php?id=100078106309466"><img src="../img/Logo_facebook.png" alt="logo facebook" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px"/></a>
 			<p id="mention"><small>Quentin / Clement / Maxime / Yohann<br />Copyright ADDICTAB - Tous droits réservés.</small></p>
 			<br><br>

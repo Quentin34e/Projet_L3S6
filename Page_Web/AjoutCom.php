@@ -14,7 +14,7 @@
  <div id="bloc_page">
                 <header>
                             <div id="entete"> 
-   <h1>Refus</h1><!--Nom au dessus de l'onglet-->
+   <h1>Valide</h1><!--Nom au dessus de l'onglet-->
 	  <?  session_start();
 			if(isset($_SESSION['utilisateur'])){
 				echo '<a id="connexion" class="bouton" href="déconnexion.php">  <span>Se déconnecter</span></a>';
@@ -39,38 +39,27 @@
 <!--ENTETE DU SITE-->
 <section>
 			<article>
-			<h2>Echec</h2>
-				<p>Votre sujet n'a pas été ajouté.</br>
-				Vérifier votre saisie dans Rubrique et description</br>
-				Verifier que l'information ecrite dans Rubrique</br>
-				Soit l'un des 3 termes suivants :</br>
-				</br>sante
-				</br>experience
-				</br>general</p>
-				<p>Si ce n'est pas le cas veuillez réitérer votre action.</p>
-				<table>
-				  <h2>Ajouter un topic:</h2>
-					<form action="insertSujet.php" method="post" autocomplete="off">
-					<p>
-					Rubrique :
-					<input type="text" name="intitule" value=<?php echo "'".$_POST['intitule']."'"; ?> />
-					<br/>indiquer : sante ou general ou experience</p>
-					<p>
-					Description :
-					<input type="text" name="description" value=<?php echo "'".$_POST['description']."'"; ?> />
-					<br/>maximum : 300 caractères   </p>
-					<?  session_start();
-					if(isset($_SESSION['utilisateur'])){
-						echo '<p>
-					<button class="bouton" type="submit" class="btn btn-primary"><span>Envoyer</span></button>
-					</p>';}
-					else {
-						echo '<p class="p_centre"><a class="bouton" href="connexion.php"><span>connexion</span></a></p></li>';
-						}
-					?>	
-					</form>
-				</table>
-					
+			<h2>Mise à Jour de la base donnée.</h2>
+				<p>Félicitation votre commentaire a été ajouté !</p> 
+				<p><a class="bouton" href="forumVerif.php"><span>RETOUR</span></a></p>
+					<table id="forum" border="30" cellpadding="15">
+					<tr>
+					<th>Description</th>
+					<th>Rubrique</th>
+					<th>IdPost</th>
+					</tr>
+					<?php
+					require ('bd.php');
+					$PDO = getBD();
+					$re= $PDO -> query('select * from post ORDER by idPost DESC LIMIT 5');
+					while ($mat = $re-> fetch()){
+						echo '<tr><td>'.$mat['description'].'</td>';
+						echo '<td>'.$mat['intitule'].'</td>';
+						echo '<td>'.$mat['idPost'].'</td></br>';
+					}
+					$re ->closeCursor();
+					?>
+					</table>
 			</article>
 </section>
 
@@ -79,8 +68,7 @@
 
 			<h2 align="center">Contact</h2>
 				<p align="center"><a href="tel:06XXXXXXXX"><img src="../img/Logo_Telephone.jpg" alt="image téléphone" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px" /></a>
-				<a href="mailto:addictab123@gmail.com"><img src="../img/email.jpg" alt="image enveloppe" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px"/></a>
-				<a href="https://www.facebook.com/profile.php?id=100078106309466"><img src="../img/Logo_facebook.png" alt="logo facebook" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px"/></a>
+				<a href="mailto:addictab123@gmail.com"><img src="../img/email.jpg" alt="image enveloppe" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px"/></a><a href="https://www.facebook.com/profile.php?id=100078106309466"><img src="../img/Logo_facebook.png" alt="logo facebook" position="relative" width="60px" margin=" 15px 15px 15px 15px"top="5px"/></a>
 			<p id="mention"><small>Quentin / Clement / Maxime / Yohann<br />Copyright ADDICTAB - Tous droits réservés.</small></p>
 			<br><br>
 

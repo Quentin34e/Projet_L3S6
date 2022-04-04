@@ -4,10 +4,10 @@
 		<?php
 		
 			if(  $_POST['idRep']=='' || $_POST['champ']=='' || $_POST['rubriq']!='sante' & $_POST['rubriq']!='experience' & $_POST['rubriq']!='general'){
-				header('Location: RefusTopic.php');
+				header('Location: RefusCom.php');
 			}
 			else{
-				header('Location: AjoutTopic.php');
+				header('Location: AjoutCom.php');
 			}
 			function insertRep($idRep, $champ, $rubriq ){
 				$sql="INSERT INTO `commentaire`(`idRep`,`rubriq`,`champ`) 
@@ -23,7 +23,7 @@
 					include('bd.php');
 					$bdd= getBD();
 					if(  $_POST['idRep']=='' || $_POST['champ']=='' || $_POST['rubriq']!='sante' & $_POST['rubriq']!='experience' & $_POST['rubriq']!='general'){
-					header('Location: RefusTopic.php');}
+					header('Location: RefusCom.php');}
 					else{
 						$rep = $bdd->query(insertRep($_POST['idRep'],$_POST['champ'],$_POST['rubriq'],));
 						}
