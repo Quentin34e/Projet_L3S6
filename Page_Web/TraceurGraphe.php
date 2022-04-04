@@ -43,9 +43,10 @@ session_start();
    </nav>
 </div><!--FIN ENTETE SITE-->
 
-	<?php // content="text/plain; charset=utf-8"
-		require_once ('jpgraph.php');
-		require_once ('jpgraph_line.php');
+	<?php  
+		//content="text/plain; charset=utf-8"
+		require_once ('../jpgraph/jpgraph/src/jpgraph.php');
+		require_once ('../jpgraph/jpgraph/src/jpgraph_line.php');
 
 		$datay1 = array(20,15,23,15); //Faire les requêtes
 		$datay2 = array(12,9,42,8);
@@ -97,7 +98,8 @@ session_start();
 
 		// Output line
 		$graph->Stroke();
-
+		
+		echo '<section><article><p>'.$graph.'</p></article></section>';
 	?>
 
 			<footer><!--PIED DE PAGE-->
