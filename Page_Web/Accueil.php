@@ -7,6 +7,7 @@
      <meta property="og:locale" content="fr_FR" />
      <meta name="description" content="Site officiel Addictab: Vous trouverez sur le site un grand nombre d'informations. Vous pourrez connaître les différentes conséquences du tabac et vous pourrez intéragir avec d'autres utilisateurs"/>
      <link rel="stylesheet" href="style.css" />
+
  
      <title>Addictab</title>
 	<script language="javascript">
@@ -97,7 +98,9 @@
 			</article>
 		</section>
 		<section>
+			
 			<article>
+			<div class="container">
 				<H2> Vrai / Faux</H2>
 				<HR>
 				<FORM NAME="qcm1">
@@ -152,7 +155,9 @@
 				</INPUT>
 				</FORM>
 				
+			<div>	
 			</article>
+			
 		</section>
 		 <footer><!--PIED DE PAGE-->
             
