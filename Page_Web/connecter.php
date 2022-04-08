@@ -21,7 +21,8 @@
 			$_SESSION['utilisateur'] = array($table['nom'],
                                     $table['prenom'],
                                     $mail,
-                                    $mdp);
+                                    $mdp,
+									$table['id_utilisateur']);
         header('Location: Accueil.php');
 		
     }

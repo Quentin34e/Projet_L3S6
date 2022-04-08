@@ -8,9 +8,9 @@
      <meta name="description" content="Site officiel Addictab: Vous trouverez sur le site un grand nombre d'informations. Vous pourrez connaître les différentes conséquences du tabac et vous pourrez intéragir avec d'autres utilisateurs"/>
      <link rel="stylesheet" href="style.css" />
  
-     <title>Addictab</title>
+     <title>Addictab</title> 
 	<script language="javascript">
-		var q1=0;
+		var q1=0; 
 		var q2=0;
 		var q3=0;
 		var q4=0;
@@ -20,7 +20,7 @@
 		var q8=0;
 		var q9=0;
 		var q10=0;
-      function score(){ 
+      function score(){ //Calcul du score au qcm
 		score=q1+q2+q3+q4+q5+q6+q7+q8+q9+q10
 		
         
@@ -39,10 +39,10 @@
    <h1>Accueil</h1><!--Nom au dessus de l'onglet-->
 	  <?  session_start();
 			if(isset($_SESSION['utilisateur'])){
-				echo '<a id="connexion" class="bouton" href="déconnexion.php">  <span>Se déconnecter</span></a>';
+				echo '<a id="connexion" class="bouton" href="déconnexion.php">  <span>Se déconnecter</span></a>'; //si connecter affiche le bouton deconnecter
 			}
 			else {
-				echo '<a id="connexion" class="bouton" href="connexion.php">  <span>Se connecter</span></a>';
+				echo '<a id="connexion" class="bouton" href="connexion.php">  <span>Se connecter</span></a>'; //sinon afficher le bouton connexion
 			}
 		?>	
       
@@ -60,7 +60,7 @@
    </nav>
 </div><!--FIN ENTETE SITE-->
 		<?
-		if(isset($_SESSION['utilisateur'])){
+		if(isset($_SESSION['utilisateur'])){ //affiche le profil une fois connecté
 				
 				echo '<section><article>';
 				echo '<h2>Bienvenue</h2>';

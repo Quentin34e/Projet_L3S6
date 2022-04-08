@@ -17,7 +17,7 @@
 	     <div id="bloc_page">
                 <header>
                             <div id="entete"> 
-   <h1>Accueil</h1><!--Nom au dessus de l'onglet-->
+   <h1>Prévention</h1><!--Nom au dessus de l'onglet-->
       <?  session_start();
 			if(isset($_SESSION['utilisateur'])){
 				echo '<a id="connexion" class="bouton" href="déconnexion.php">  <span>Se déconnecter</span></a>';
