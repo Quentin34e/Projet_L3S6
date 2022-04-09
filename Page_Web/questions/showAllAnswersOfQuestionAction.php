@@ -1,0 +1,6 @@
+<?php
+
+require('../bd.php');
+
+$getAllAnswersOfThisQuestion = $bdd->prepare('SELECT id_autheur, pseudo_autheur, id_question, contenu FROM answers WHERE id_question = ? ORDER BY id DESC');
+$getAllAnswersOfThisQuestion->execute(array($idOfTheQuestion)); 
